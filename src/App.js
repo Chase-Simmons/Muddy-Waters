@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+const F = require('./functions/.root.js');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const readCMD = () => {
+  F.readline.question('', (res) => {
+    F.commandParser({ res: res, F: F });
+  });
+};
 
-export default App;
+console.log(
+  'Welcome to Muddy Waters! To login or create an account type `/login` or `/register`'
+);
+readCMD();
