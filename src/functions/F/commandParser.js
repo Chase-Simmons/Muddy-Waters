@@ -6,7 +6,7 @@ const commandParser = (obj) => {
       obj.F.login(obj);
       break;
     case '/logout':
-      defaultConsole = true;
+      defaultConsole = false;
       break;
 
     case '/register':
