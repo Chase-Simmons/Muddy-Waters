@@ -1,21 +1,20 @@
-const commandParser = (obj) => {
-  let defaultConsole;
-  switch (obj.res) {
+const commandParser = (e) => {
+  let defaultConsole = false;
+  switch (e.res) {
     case '/login':
-      defaultConsole = false;
-      obj.F.login(obj);
+      e.F.login(e);
       break;
     case '/logout':
-      defaultConsole = false;
+      process.exit();
       break;
 
     case '/register':
-      defaultConsole = false;
+      e.F.register(e);
       break;
 
     case '/help':
+      e.F.help();
       defaultConsole = true;
-      obj.F.help();
       break;
 
     default:
@@ -24,11 +23,11 @@ const commandParser = (obj) => {
   }
   if (defaultConsole === true) {
     obj.F.readline.question('', (res) => {
-      commandParser({ res: res, F: obj.F });
+      commandParser({ res: res, F: e.F });
     });
   }
 };
 
-module.exports = (obj) => {
-  commandParser(obj);
+module.exports = (e) => {
+  commandParser(e);
 };

@@ -7,6 +7,6 @@ const readCMD = () => {
 };
 
 console.log(
-  'Welcome to Muddy Waters! To login or create an account type `/login` or `/register`'
+  'welcome to Muddy Waters! To login or create an account type `/login` or `/register`'
 );
 readCMD();

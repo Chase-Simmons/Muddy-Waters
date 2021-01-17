@@ -6,10 +6,14 @@ const readline = require('readline').createInterface({
 const commandParser = require('./F/commandParser');
 const login = require('./F/login');
 const help = require('./F/help');
+const register = require('./F/register');
+const saveDataParser = require('./F/saveDataParser');
 
 module.exports = {
   readline,
-  commandParser,
   login,
   help,
+  register,
+  commandParser,
+  saveDataParser,
 };
