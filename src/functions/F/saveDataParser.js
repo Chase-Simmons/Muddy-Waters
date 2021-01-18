@@ -1,3 +1,5 @@
+const write = require('write');
+
 module.exports = (e) => {
   if (typeof e === 'string') {
     let readingGroupKey = false;
@@ -66,5 +68,16 @@ module.exports = (e) => {
     return saveData;
   } else if (typeof e === 'object') {
     console.log('data needs to be unparsed');
+    let unparsedSaveData = '';
+
+    for (const [groupKey, groupKeyObj] of Object.entries(e)) {
+      unparsedSaveData += `*${groupKey}*`;
+      for (const [dataKey, data] of Object.entries(groupKeyObj)) {
+        unparsedSaveData += `${dataKey}:${data},`;
+      }
+    }
+    unparsedSaveData += '&';
+
+    write('src/save/data.txt', unparsedSaveData);
   }
 };
