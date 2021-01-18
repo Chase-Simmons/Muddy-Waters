@@ -1,4 +1,4 @@
-const commandParser = (e) => {
+module.exports = (e) => {
   let defaultConsole = false;
   switch (e.res) {
     case '/login':
@@ -22,12 +22,8 @@ const commandParser = (e) => {
       break;
   }
   if (defaultConsole === true) {
-    obj.F.readline.question('', (res) => {
-      commandParser({ res: res, F: e.F });
+    e.F.readline.question('', (res) => {
+      e.F.commandParser({ res: res, F: e.F });
     });
   }
-};
-
-module.exports = (e) => {
-  commandParser(e);
 };

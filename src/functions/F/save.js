@@ -1,6 +1,10 @@
 let save = {};
 
 module.exports = (e) => {
-  save = e.saveData;
-  return save;
+  if (e.type === 'save') {
+    save = { ...save, ...e.data };
+    console.log(save);
+  } else if (e.type === 'get') {
+    return save;
+  }
 };

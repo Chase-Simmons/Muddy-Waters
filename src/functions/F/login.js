@@ -1,7 +1,7 @@
 const fs = require('fs');
 const write = require('write');
 
-const login = (e) => {
+module.exports = (e) => {
   // e.F.readline.question('Enter Username : ', (resName) => {
   //   if (resName === 'admin') {
   //     e.F.readline.question('Enter Password : ', (resPass) => {
@@ -16,8 +16,4 @@ const login = (e) => {
   //     });
   //   }
   // });
-};
-
-module.exports = (e) => {
-  login(e);
 };

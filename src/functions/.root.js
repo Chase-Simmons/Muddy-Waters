@@ -8,6 +8,7 @@ const login = require('./F/login');
 const help = require('./F/help');
 const register = require('./F/register');
 const saveDataParser = require('./F/saveDataParser');
+const save = require('./F/save');
 
 module.exports = {
   readline,
@@ -16,4 +17,5 @@ module.exports = {
   register,
   commandParser,
   saveDataParser,
+  save,
 };

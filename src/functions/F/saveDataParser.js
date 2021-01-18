@@ -1,8 +1,9 @@
-const saveDataParser = (e) => {
+module.exports = (e) => {
   let readingGroupKey = false;
   let readingDataKey = false;
   let readingData = false;
   let groupKey = '';
+  let groupKeyObj = {};
   let dataKey = '';
   let data = '';
   let dataArray = [];
@@ -21,6 +22,8 @@ const saveDataParser = (e) => {
       readingData = true;
     } else if (e[i] === ',') {
       dataArray.push({ [dataKey]: data });
+      readingDataKey = true;
+      readingData = false;
       dataKey = '';
       data = '';
     } else if (e[i] === '&') {
@@ -28,39 +31,36 @@ const saveDataParser = (e) => {
         [groupKey]: {},
       };
 
-      for (item in dataArray) {
-        saveData = {
-          ...saveData,
-          [groupKey]: {
-            ...item,
-          },
+      for (let index = 0; index < dataArray.length; index++) {
+        groupKeyObj = {
+          ...groupKeyObj,
+          ...dataArray[index],
         };
       }
+      saveData = {
+        [groupKey]: groupKeyObj,
+      };
+
       readingGroupKey = false;
       readingDataKey = false;
       readingData = false;
-      groupKey = '';
-      dataKey = '';
-      data = '';
-      dataArray = [];
     }
     if (readingGroupKey === true) {
-      if (e[i] !== '*') {
+      if (e[i] !== '*' && e[i] !== ':' && e[i] !== ',' && e[i] !== '&') {
         groupKey += e[i];
       }
     }
     if (readingDataKey === true) {
-      dataKey += e[i];
+      if (e[i] !== '*' && e[i] !== ':' && e[i] !== ',' && e[i] !== '&') {
+        dataKey += e[i];
+      }
     }
     if (readingData === true) {
-      data += e[i];
+      if (e[i] !== '*' && e[i] !== ':' && e[i] !== ',' && e[i] !== '&') {
+        data += e[i];
+      }
     }
   }
 
-  console.log(saveData);
   return saveData;
-};
-
-module.exports = (e) => {
-  saveDataParser(e);
 };
