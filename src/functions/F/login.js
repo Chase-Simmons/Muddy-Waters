@@ -9,15 +9,15 @@ const activateCP = (e) => {
 
 module.exports = (e) => {
   const saveData = e.F.save({ type: 'get' });
-  e.F.readline.question('Enter Username : ', (resName) => {
+  e.F.readline.question('enter username : ', (resName) => {
     if (resName === saveData.login.name) {
-      e.F.readline.question('Enter Password : ', (resPass) => {
+      e.F.readline.question('enter password : ', (resPass) => {
         if (resPass === saveData.login.password) {
           setTimeout(() => {
-            console.log('Logging In...');
+            console.log('logging in...');
           }, 500);
           setTimeout(() => {
-            console.log('Successfully logged in.');
+            console.log('successfully logged in.');
           }, 1000);
           setTimeout(() => {
             console.log(`hello ${saveData.login.name}!`);

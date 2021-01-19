@@ -9,6 +9,7 @@ const help = require('./F/help');
 const register = require('./F/register');
 const saveDataParser = require('./F/saveDataParser');
 const save = require('./F/save');
+const rollBonusStats = require('./F/rollBonusStats');
 
 module.exports = {
   readline,
@@ -18,4 +19,5 @@ module.exports = {
   commandParser,
   saveDataParser,
   save,
+  rollBonusStats,
 };

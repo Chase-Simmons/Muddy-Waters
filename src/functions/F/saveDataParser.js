@@ -67,7 +67,6 @@ module.exports = (e) => {
 
     return saveData;
   } else if (typeof e === 'object') {
-    console.log('data needs to be unparsed');
     let unparsedSaveData = '';
 
     for (const [groupKey, groupKeyObj] of Object.entries(e)) {
