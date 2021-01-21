@@ -18,7 +18,9 @@ module.exports = (e) => {
       e.F.saveDataParser({ login: { name, password } });
       e.F.save({ data: { login: { name, password } }, type: 'save' });
       setTimeout(() => {
-        console.log('please select a class by typing out its name');
+        console.log(
+          'please select a class by typing out its name ex. `/warrior`'
+        );
         console.log('');
         console.log(
           '     warrior   :   | str: 7 | dex : 1 | vit: 7 | def: 6 | agi: 2 | arc: 2 | pie: 3 | bonus: 0 |'
@@ -39,9 +41,38 @@ module.exports = (e) => {
           '     banished  :   | str: 4 | dex : 3 | vit: 4 | def: 4 | agi: 3 | arc: 4 | pie: 1 | bonus: 5 |'
         );
         console.log('');
-        e.F.readline.question('', (res) => {
-          e.F.commandParser({ res: res, F: e.F });
-        });
+        let selectedClass;
+        const selectClass = () => {
+          e.F.readline.question('', (res) => {
+            switch (res) {
+              case '/warrior':
+                selectClass = 'warrior';
+                break;
+              case '/cleric':
+                selectClass = 'cleric';
+                break;
+              case '/rogue':
+                selectClass = 'rogue';
+                break;
+              case '/mage':
+                selectClass = 'mage';
+                break;
+              case '/archer':
+                selectClass = 'archer';
+                break;
+              case '/banished':
+                selectClass = 'banished';
+                break;
+              default:
+                selectClass();
+                console.log(
+                  'could not match to any class names please try again.'
+                );
+                break;
+            }
+          });
+        };
+        selectClass();
       }, 750);
     });
   });
