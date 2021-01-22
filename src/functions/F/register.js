@@ -160,6 +160,7 @@ module.exports = (e) => {
                   const bonus = e.F.rollBonusStats();
                   const trueBonus = bonus + selectedClassStats.bns;
                   setTimeout(() => {
+                    console.log('');
                     console.log(`you rolled a : ${trueBonus}`);
                   }, 1000);
                 }
@@ -168,7 +169,7 @@ module.exports = (e) => {
           });
         };
         selectClass();
-      }, 1500);
+      }, 1000);
     });
   });
 };
