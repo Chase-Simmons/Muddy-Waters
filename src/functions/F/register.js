@@ -159,9 +159,36 @@ module.exports = (e) => {
                 (res) => {
                   const bonus = e.F.rollBonusStats();
                   const trueBonus = bonus + selectedClassStats.bns;
+                  selectedClassStats.bns = trueBonus;
                   setTimeout(() => {
                     console.log('');
                     console.log(`you rolled a : ${trueBonus}`);
+                    console.log('');
+                    console.log(
+                      '|---------------------------------------------------------------------------------------------|'
+                    );
+                    console.log(
+                      '|             you can now distribute your bonus stats. ex. `/str 1` or `/pie 3`.              |'
+                    );
+                    console.log(
+                      '|---------------------------------------------------------------------------------------------|'
+                    );
+                    console.log('');
+                    console.log(
+                      `current stats  |  bonus points left : ${selectedClassStats.bns}`
+                    );
+                    console.log(`--<> str: ${selectedClassStats.str}`);
+                    console.log(`--<> dex: ${selectedClassStats.dex}`);
+                    console.log(`--<> vit: ${selectedClassStats.vit}`);
+                    console.log(`--<> def: ${selectedClassStats.def}`);
+                    console.log(`--<> agi: ${selectedClassStats.agi}`);
+                    console.log(`--<> arc: ${selectedClassStats.arc}`);
+                    console.log(`--<> pie: ${selectedClassStats.pie}`);
+                    console.log('');
+                    const handleBonusDistribution = () => {
+                      e.F.readline.question('', (res) => {});
+                    };
+                    handleBonusDistribution();
                   }, 1000);
                 }
               );
