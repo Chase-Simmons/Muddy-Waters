@@ -42,26 +42,87 @@ module.exports = (e) => {
         );
         console.log('');
         let selectedClass;
+        let selectedClassStats;
         const selectClass = () => {
           e.F.readline.question('', (res) => {
             switch (res) {
               case '/warrior':
-                selectClass = 'warrior';
+                selectedClass = 'warrior';
+                selectedClassStats = {
+                  str: 7,
+                  dex: 1,
+                  vit: 7,
+                  def: 6,
+                  agi: 2,
+                  arc: 2,
+                  pie: 3,
+                  bns: 0,
+                };
                 break;
               case '/cleric':
-                selectClass = 'cleric';
+                selectedClass = 'cleric';
+                selectedClassStats = {
+                  str: 3,
+                  dex: 1,
+                  vit: 6,
+                  def: 2,
+                  agi: 2,
+                  arc: 5,
+                  pie: 9,
+                  bns: 0,
+                };
                 break;
               case '/rogue':
-                selectClass = 'rogue';
+                selectedClass = 'rogue';
+                selectedClassStats = {
+                  str: 6,
+                  dex: 3,
+                  vit: 6,
+                  def: 2,
+                  agi: 7,
+                  arc: 3,
+                  pie: 1,
+                  bns: 0,
+                };
                 break;
               case '/mage':
-                selectClass = 'mage';
+                selectedClass = 'mage';
+                selectedClassStats = {
+                  str: 2,
+                  dex: 2,
+                  vit: 4,
+                  def: 4,
+                  agi: 3,
+                  arc: 9,
+                  pie: 4,
+                  bns: 0,
+                };
                 break;
               case '/archer':
-                selectClass = 'archer';
+                selectedClass = 'archer';
+                selectedClassStats = {
+                  str: 2,
+                  dex: 7,
+                  vit: 4,
+                  def: 3,
+                  agi: 6,
+                  arc: 2,
+                  pie: 4,
+                  bns: 0,
+                };
                 break;
               case '/banished':
-                selectClass = 'banished';
+                selectedClass = 'banished';
+                selectedClassStats = {
+                  str: 4,
+                  dex: 3,
+                  vit: 4,
+                  def: 4,
+                  agi: 3,
+                  arc: 4,
+                  pie: 1,
+                  bns: 5,
+                };
                 break;
               default:
                 selectClass();
@@ -70,6 +131,8 @@ module.exports = (e) => {
                 );
                 break;
             }
+            console.log('');
+            console.log(`you have selected the class of ${selectedClass}`);
           });
         };
         selectClass();
