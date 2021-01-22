@@ -12,8 +12,15 @@ const readCMD = () => {
     F.commandParser({ res: res, F: F });
   });
 };
-
 console.log(
-  'welcome to Muddy Waters! To login or create an account type `/login` or `/register`'
+  '|---------------------------------------------------------------------------------------------|'
 );
+console.log(
+  '|      welcome to Muddy Waters! To login or create an account type `/login` or `/register`    |'
+);
+console.log(
+  '|---------------------------------------------------------------------------------------------|'
+);
+console.log('');
+
 readCMD();
