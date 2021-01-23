@@ -173,21 +173,48 @@ module.exports = (e) => {
                     console.log(
                       '|---------------------------------------------------------------------------------------------|'
                     );
-                    console.log('');
-                    console.log(
-                      `current stats  |  bonus points left : ${selectedClassStats.bns}`
-                    );
-                    console.log(`--<> str: ${selectedClassStats.str}`);
-                    console.log(`--<> dex: ${selectedClassStats.dex}`);
-                    console.log(`--<> vit: ${selectedClassStats.vit}`);
-                    console.log(`--<> def: ${selectedClassStats.def}`);
-                    console.log(`--<> agi: ${selectedClassStats.agi}`);
-                    console.log(`--<> arc: ${selectedClassStats.arc}`);
-                    console.log(`--<> pie: ${selectedClassStats.pie}`);
-                    console.log('');
+                    setTimeout(() => {
+                      console.log('');
+                      console.log(
+                        `current stats  |  bonus points left : ${selectedClassStats.bns}`
+                      );
+                      console.log(`--<> str: ${selectedClassStats.str}`);
+                      console.log(`--<> dex: ${selectedClassStats.dex}`);
+                      console.log(`--<> vit: ${selectedClassStats.vit}`);
+                      console.log(`--<> def: ${selectedClassStats.def}`);
+                      console.log(`--<> agi: ${selectedClassStats.agi}`);
+                      console.log(`--<> arc: ${selectedClassStats.arc}`);
+                      console.log(`--<> pie: ${selectedClassStats.pie}`);
+                      console.log('');
+                    }, 1000);
                     const handleBonusDistribution = () => {
-                      e.F.readline.question('', (res) => {});
+                      e.F.readline.question('', (res) => {
+                        let stat = '';
+                        let bonus = '+';
+                        let statBonuses = {
+                          str: '',
+                          dex: '',
+                          vit: '',
+                          def: '',
+                          agi: '',
+                          arc: '',
+                          pie: '',
+                        };
+                        for (let i = 0; i < res.length; i++) {
+                          if (i > 0 && i < 4) {
+                            stat += res[i];
+                          } else if (i > 4) {
+                            bonus += res[i];
+                          }
+                        }
+                        statBonuses = {
+                          ...statBonuses,
+                          [stat]: bonus,
+                        };
+                        console.log(statBonuses);
+                      });
                     };
+
                     handleBonusDistribution();
                   }, 1000);
                 }
