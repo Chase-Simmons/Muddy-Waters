@@ -157,7 +157,7 @@ module.exports = (e) => {
               e.F.readline.question(
                 "please hit the enter key whenever you're ready to roll",
                 (res) => {
-                  const bonus = e.F.rollBonusStats();
+                  let bonus = e.F.rollBonusStats();
                   const trueBonus = bonus + selectedClassStats.bns;
                   selectedClassStats.bns = trueBonus;
                   setTimeout(() => {
@@ -190,7 +190,8 @@ module.exports = (e) => {
                     const handleBonusDistribution = () => {
                       e.F.readline.question('', (res) => {
                         let stat = '';
-                        let bonus = '+';
+                        let bonusAmt = '+';
+                        let usedPoints = '';
                         let statBonuses = {
                           str: '',
                           dex: '',
@@ -203,15 +204,23 @@ module.exports = (e) => {
                         for (let i = 0; i < res.length; i++) {
                           if (i > 0 && i < 4) {
                             stat += res[i];
+                          } else if (i === 4) {
+                            bonusAmt += res[i];
                           } else if (i > 4) {
-                            bonus += res[i];
+                            bonusAmt += res[i];
+                            usedPoints += res[i];
                           }
                         }
+
+                        console.log(bonus, usedPoints);
+                        bonus = parseInt(bonus) - parseInt(usedPoints);
+
                         statBonuses = {
                           ...statBonuses,
-                          [stat]: bonus,
+                          [stat]: bonusAmt,
                         };
-                        console.log(statBonuses);
+
+                        console.log(bonus, usedPoints);
                       });
                     };
 
