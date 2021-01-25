@@ -4,7 +4,7 @@ let password;
 let selectedClass;
 let selectedClassStats;
 
-// let bonus = e.F.rollBonusStats();
+let bonus;
 let trueBonus;
 
 let stat = '';
@@ -160,97 +160,97 @@ const classSelection = (e) => {
         console.log('could not match to any class names please try again.');
         break;
     }
+
     console.log('');
     console.log(`you have selected the class of ${selectedClass}`);
     console.log('');
 
+    bonus = e.F.rollBonusStats();
     trueBonus = bonus + selectedClassStats.bns;
     setTimeout(() => {
-      handleBonusStats();
+      console.log(
+        '|---------------------------------------------------------------------------------------------|'
+      );
+      console.log(
+        '|      you will now roll your bonus stats, the banished class gets an addition 5 points       |'
+      );
+      console.log(
+        '|---------------------------------------------------------------------------------------------|'
+      );
+      console.log('');
+
+      e.F.readline.question(
+        "please hit the enter key whenever you're ready to roll",
+        () => {
+          selectedClassStats.bns = trueBonus;
+          setTimeout(() => {
+            console.log('');
+            console.log(`you rolled a : ${trueBonus}`);
+            console.log('');
+            console.log(
+              '|---------------------------------------------------------------------------------------------|'
+            );
+            console.log(
+              '|             you can now distribute your bonus stats. ex. `/str 1` or `/pie 3`.              |'
+            );
+            console.log(
+              '|---------------------------------------------------------------------------------------------|'
+            );
+
+            setTimeout(() => {
+              handleBonusStats(e);
+            }, 1000);
+          }, 1000);
+        }
+      );
     }, 1000);
   });
 };
 
-const handleBonusStats = () => {};
+const handleBonusStats = (e) => {
+  setTimeout(() => {
+    console.log('');
+    console.log(
+      `current stats  |  bonus points left : ${selectedClassStats.bns}`
+    );
+    console.log('');
+    console.log(`--<> str: ${selectedClassStats.str}`);
+    console.log(`--<> dex: ${selectedClassStats.dex}`);
+    console.log(`--<> vit: ${selectedClassStats.vit}`);
+    console.log(`--<> def: ${selectedClassStats.def}`);
+    console.log(`--<> agi: ${selectedClassStats.agi}`);
+    console.log(`--<> arc: ${selectedClassStats.arc}`);
+    console.log(`--<> pie: ${selectedClassStats.pie}`);
+    console.log('');
+
+    e.F.readline.question('', (res) => {
+      console.log('');
+      for (let i = 0; i < res.length; i++) {
+        if (i > 0 && i < 4) {
+          stat += res[i];
+        } else if (i === 4) {
+          bonusAmt += res[i];
+        } else if (i > 4) {
+          bonusAmt += res[i];
+          usedPoints += res[i];
+        }
+      }
+
+      trueBonus = parseInt(trueBonus) - parseInt(usedPoints);
+      selectedClassStats.bns = trueBonus;
+
+      statBonuses = {
+        ...statBonuses,
+        [stat]: bonusAmt,
+      };
+      if (trueBonus > 0) {
+        console.log(statBonuses);
+        handleBonusStats(e);
+      } else {
+      }
+    });
+  }, 500);
+};
 module.exports = (e) => {
   HandleUserPass(e);
-  //   setTimeout(() => {
-  //     setTimeout(() => {
-  //       console.log(
-  //         '|---------------------------------------------------------------------------------------------|'
-  //       );
-  //       console.log(
-  //         '|      you will now roll your bonus stats, the banished class gets an addition 5 points       |'
-  //       );
-  //       console.log(
-  //         '|---------------------------------------------------------------------------------------------|'
-  //       );
-  //       console.log('');
-  //       e.F.readline.question(
-  //         "please hit the enter key whenever you're ready to roll",
-  //         (res) => {
-  //           selectedClassStats.bns = trueBonus;
-  //           setTimeout(() => {
-  //             console.log('');
-  //             console.log(`you rolled a : ${trueBonus}`);
-  //             console.log('');
-  //             console.log(
-  //               '|---------------------------------------------------------------------------------------------|'
-  //             );
-  //             console.log(
-  //               '|             you can now distribute your bonus stats. ex. `/str 1` or `/pie 3`.              |'
-  //             );
-  //             console.log(
-  //               '|---------------------------------------------------------------------------------------------|'
-  //             );
-  //             setTimeout(() => {
-  //               console.log('');
-  //               console.log(
-  //                 `current stats  |  bonus points left : ${selectedClassStats.bns}`
-  //               );
-  //               console.log(`--<> str: ${selectedClassStats.str}`);
-  //               console.log(`--<> dex: ${selectedClassStats.dex}`);
-  //               console.log(`--<> vit: ${selectedClassStats.vit}`);
-  //               console.log(`--<> def: ${selectedClassStats.def}`);
-  //               console.log(`--<> agi: ${selectedClassStats.agi}`);
-  //               console.log(`--<> arc: ${selectedClassStats.arc}`);
-  //               console.log(`--<> pie: ${selectedClassStats.pie}`);
-  //               console.log('');
-  //             }, 1000);
-
-  //             const handleBonusDistribution = () => {
-  //               e.F.readline.question('', (res) => {
-  //                 for (let i = 0; i < res.length; i++) {
-  //                   if (i > 0 && i < 4) {
-  //                     stat += res[i];
-  //                   } else if (i === 4) {
-  //                     bonusAmt += res[i];
-  //                   } else if (i > 4) {
-  //                     bonusAmt += res[i];
-  //                     usedPoints += res[i];
-  //                   }
-  //                 }
-
-  //                 trueBonus = parseInt(trueBonus) - parseInt(usedPoints);
-
-  //                 statBonuses = {
-  //                   ...statBonuses,
-  //                   [stat]: bonusAmt,
-  //                 };
-  //                 if (trueBonus > 0) {
-  //                   console.log(statBonuses);
-  //                   handleBonusDistribution();
-  //                 } else {
-  //                 }
-  //               });
-  //             };
-
-  //             handleBonusDistribution();
-  //           }, 1000);
-  //         }
-  //       );
-  //     }, 500);
-  //   });
-  // };
-  /*-----> BONUS STAT ROLL/DISTRIBUTION <-----*/
 };
