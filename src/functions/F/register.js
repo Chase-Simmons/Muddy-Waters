@@ -6,19 +6,23 @@ let selectedClassStats;
 
 let bonus;
 let trueBonus;
+let bonusLeft;
 
 let stat = '';
-let bonusAmt = '+';
-let usedPoints = '';
 let statBonuses = {
-  str: '',
-  dex: '',
-  vit: '',
-  def: '',
-  agi: '',
-  arc: '',
-  pie: '',
+  str: 0,
+  dex: 0,
+  vit: 0,
+  def: 0,
+  agi: 0,
+  arc: 0,
+  pie: 0,
 };
+
+let bonusAmt = 0;
+let bonusAmtHolder = '';
+let usedPoints = 0;
+let usedPointsHolder = '';
 
 const HandleUserPass = (e) => {
   console.log('');
@@ -199,8 +203,8 @@ const classSelection = (e) => {
 
             setTimeout(() => {
               handleBonusStats(e);
-            }, 1000);
-          }, 1000);
+            }, 500);
+          }, 500);
         }
       );
     }, 1000);
@@ -226,23 +230,37 @@ const handleBonusStats = (e) => {
     e.F.readline.question('', (res) => {
       console.log('');
       for (let i = 0; i < res.length; i++) {
+        console.log(res[i], i);
         if (i > 0 && i < 4) {
           stat += res[i];
         } else if (i === 4) {
-          bonusAmt += res[i];
         } else if (i > 4) {
-          bonusAmt += res[i];
-          usedPoints += res[i];
+          bonusAmtHolder += res[i];
+          usedPointsHolder += res[i];
         }
       }
 
-      trueBonus = parseInt(trueBonus) - parseInt(usedPoints);
-      selectedClassStats.bns = trueBonus;
+      bonusAmt += parseInt(bonusAmtHolder);
+      bonusAmt += statBonuses[stat];
+
+      usedPoints += parseInt(usedPointsHolder);
+
+      bonusLeft = parseInt(trueBonus) - usedPoints;
+
+      selectedClassStats.bns = bonusLeft;
+
+      statBonuses[stat] += statBonuses[stat] + bonusAmt;
 
       statBonuses = {
         ...statBonuses,
         [stat]: bonusAmt,
       };
+
+      bonusAmt = 0;
+      bonusAmtHolder = '';
+      usedPointsHolder = '';
+      stat = '';
+
       if (trueBonus > 0) {
         console.log(statBonuses);
         handleBonusStats(e);
