@@ -202,6 +202,20 @@ const classSelection = (e) => {
             );
 
             setTimeout(() => {
+              console.log('');
+              console.log(
+                `current stats  |  bonus points left : ${selectedClassStats.bns}`
+              );
+              console.log('');
+              console.log(`--<> str: ${selectedClassStats.str}`);
+              console.log(`--<> dex: ${selectedClassStats.dex}`);
+              console.log(`--<> vit: ${selectedClassStats.vit}`);
+              console.log(`--<> def: ${selectedClassStats.def}`);
+              console.log(`--<> agi: ${selectedClassStats.agi}`);
+              console.log(`--<> arc: ${selectedClassStats.arc}`);
+              console.log(`--<> pie: ${selectedClassStats.pie}`);
+              console.log('');
+
               handleBonusStats(e);
             }, 500);
           }, 500);
@@ -213,24 +227,9 @@ const classSelection = (e) => {
 
 const handleBonusStats = (e) => {
   setTimeout(() => {
-    console.log('');
-    console.log(
-      `current stats  |  bonus points left : ${selectedClassStats.bns}`
-    );
-    console.log('');
-    console.log(`--<> str: ${selectedClassStats.str}`);
-    console.log(`--<> dex: ${selectedClassStats.dex}`);
-    console.log(`--<> vit: ${selectedClassStats.vit}`);
-    console.log(`--<> def: ${selectedClassStats.def}`);
-    console.log(`--<> agi: ${selectedClassStats.agi}`);
-    console.log(`--<> arc: ${selectedClassStats.arc}`);
-    console.log(`--<> pie: ${selectedClassStats.pie}`);
-    console.log('');
-
     e.F.readline.question('', (res) => {
       console.log('');
       for (let i = 0; i < res.length; i++) {
-        console.log(res[i], i);
         if (i > 0 && i < 4) {
           stat += res[i];
         } else if (i === 4) {
@@ -262,7 +261,61 @@ const handleBonusStats = (e) => {
       stat = '';
 
       if (trueBonus > 0) {
-        console.log(statBonuses);
+        console.log('');
+        console.log(
+          `current stats  |  bonus points left : ${selectedClassStats.bns}`
+        );
+        console.log('');
+        if (statBonuses.str !== 0) {
+          console.log(
+            `--<> str: ${selectedClassStats.str} +${statBonuses.str}`
+          );
+        } else {
+          console.log(`--<> str: ${selectedClassStats.str}`);
+        }
+        if (statBonuses.dex !== 0) {
+          console.log(
+            `--<> dex: ${selectedClassStats.dex} +${statBonuses.dex}`
+          );
+        } else {
+          console.log(`--<> dex: ${selectedClassStats.dex}`);
+        }
+        if (statBonuses.vit !== 0) {
+          console.log(
+            `--<> vit: ${selectedClassStats.vit} +${statBonuses.vit}`
+          );
+        } else {
+          console.log(`--<> vit: ${selectedClassStats.vit}`);
+        }
+        if (statBonuses.def !== 0) {
+          console.log(
+            `--<> def: ${selectedClassStats.def} +${statBonuses.def}`
+          );
+        } else {
+          console.log(`--<> def: ${selectedClassStats.def}`);
+        }
+        if (statBonuses.agi !== 0) {
+          console.log(
+            `--<> agi: ${selectedClassStats.agi} +${statBonuses.agi}`
+          );
+        } else {
+          console.log(`--<> agi: ${selectedClassStats.agi}`);
+        }
+        if (statBonuses.arc !== 0) {
+          console.log(
+            `--<> arc: ${selectedClassStats.arc} +${statBonuses.arc}`
+          );
+        } else {
+          console.log(`--<> arc: ${selectedClassStats.arc}`);
+        }
+        if (statBonuses.pie !== 0) {
+          console.log(
+            `--<> pie: ${selectedClassStats.pie} +${statBonuses.pie}`
+          );
+        } else {
+          console.log(`--<> pie: ${selectedClassStats.pie}`);
+        }
+        console.log('');
         handleBonusStats(e);
       } else {
       }
