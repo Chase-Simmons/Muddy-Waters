@@ -229,95 +229,148 @@ const handleBonusStats = (e) => {
   setTimeout(() => {
     e.F.readline.question('', (res) => {
       console.log('');
+
+      let resDoesMatch = true;
       for (let i = 0; i < res.length; i++) {
-        if (i > 0 && i < 4) {
-          stat += res[i];
-        } else if (i === 4) {
-        } else if (i > 4) {
-          bonusAmtHolder += res[i];
-          usedPointsHolder += res[i];
+        if (res.length >= 5) {
+          if (i > 0 && i < 4) {
+            stat += res[i];
+          } else if (i === 4) {
+            if (
+              stat === 'str' ||
+              stat === 'dex' ||
+              stat === 'vit' ||
+              stat === 'def' ||
+              stat === 'agi' ||
+              stat === 'arc' ||
+              stat === 'pie'
+            ) {
+            } else {
+              i = res.length;
+              console.log(
+                `the command of '/${stat}' did not match any skills please try again.`
+              );
+              console.log('');
+              stat = '';
+              resDoesMatch = false;
+              handleBonusStats(e);
+            }
+          } else if (i > 4) {
+            bonusAmtHolder += res[i];
+            usedPointsHolder += res[i];
+          }
+        } else {
+          i = res.length;
+          console.log(
+            `please check the command again it should be no less than 5 characters long. *includes space`
+          );
+          console.log('');
+
+          resDoesMatch = false;
+          handleBonusStats(e);
         }
       }
 
-      bonusAmt += parseInt(bonusAmtHolder);
-      bonusAmt += statBonuses[stat];
+      if (resDoesMatch === true) {
+        bonusAmt += parseInt(bonusAmtHolder);
+        bonusAmt += statBonuses[stat];
 
-      usedPoints += parseInt(usedPointsHolder);
+        usedPoints += parseInt(usedPointsHolder);
 
-      bonusLeft = parseInt(trueBonus) - usedPoints;
+        console.log(usedPoints, usedPointsHolder);
+        let exceedsBns = false;
 
-      selectedClassStats.bns = bonusLeft;
+        console.log(parseInt(trueBonus), usedPoints);
+        console.log(parseInt(trueBonus) - usedPoints);
+        if (parseInt(trueBonus) - usedPoints < 0) {
+          usedPoints -= parseInt(usedPointsHolder);
+          exceedsBns = true;
+        }
 
-      statBonuses[stat] += statBonuses[stat] + bonusAmt;
+        bonusLeft = parseInt(trueBonus) - usedPoints;
 
-      statBonuses = {
-        ...statBonuses,
-        [stat]: bonusAmt,
-      };
+        selectedClassStats.bns = bonusLeft;
 
-      bonusAmt = 0;
-      bonusAmtHolder = '';
-      usedPointsHolder = '';
-      stat = '';
+        if (exceedsBns === false) {
+          statBonuses[stat] += statBonuses[stat] + bonusAmt;
 
-      if (trueBonus > 0) {
-        console.log('');
-        console.log(
-          `current stats  |  bonus points left : ${selectedClassStats.bns}`
-        );
-        console.log('');
-        if (statBonuses.str !== 0) {
-          console.log(
-            `--<> str: ${selectedClassStats.str} +${statBonuses.str}`
-          );
-        } else {
-          console.log(`--<> str: ${selectedClassStats.str}`);
+          statBonuses = {
+            ...statBonuses,
+            [stat]: bonusAmt,
+          };
         }
-        if (statBonuses.dex !== 0) {
-          console.log(
-            `--<> dex: ${selectedClassStats.dex} +${statBonuses.dex}`
-          );
+
+        bonusAmt = 0;
+        bonusAmtHolder = '';
+        usedPointsHolder = '';
+        stat = '';
+
+        if (exceedsBns === false) {
+          if (trueBonus > 0) {
+            console.log('');
+            console.log(
+              `current stats  |  bonus points left : ${selectedClassStats.bns}`
+            );
+            console.log('');
+            if (statBonuses.str !== 0) {
+              console.log(
+                `--<> str: ${selectedClassStats.str} +${statBonuses.str}`
+              );
+            } else {
+              console.log(`--<> str: ${selectedClassStats.str}`);
+            }
+            if (statBonuses.dex !== 0) {
+              console.log(
+                `--<> dex: ${selectedClassStats.dex} +${statBonuses.dex}`
+              );
+            } else {
+              console.log(`--<> dex: ${selectedClassStats.dex}`);
+            }
+            if (statBonuses.vit !== 0) {
+              console.log(
+                `--<> vit: ${selectedClassStats.vit} +${statBonuses.vit}`
+              );
+            } else {
+              console.log(`--<> vit: ${selectedClassStats.vit}`);
+            }
+            if (statBonuses.def !== 0) {
+              console.log(
+                `--<> def: ${selectedClassStats.def} +${statBonuses.def}`
+              );
+            } else {
+              console.log(`--<> def: ${selectedClassStats.def}`);
+            }
+            if (statBonuses.agi !== 0) {
+              console.log(
+                `--<> agi: ${selectedClassStats.agi} +${statBonuses.agi}`
+              );
+            } else {
+              console.log(`--<> agi: ${selectedClassStats.agi}`);
+            }
+            if (statBonuses.arc !== 0) {
+              console.log(
+                `--<> arc: ${selectedClassStats.arc} +${statBonuses.arc}`
+              );
+            } else {
+              console.log(`--<> arc: ${selectedClassStats.arc}`);
+            }
+            if (statBonuses.pie !== 0) {
+              console.log(
+                `--<> pie: ${selectedClassStats.pie} +${statBonuses.pie}`
+              );
+            } else {
+              console.log(`--<> pie: ${selectedClassStats.pie}`);
+            }
+            console.log('');
+            handleBonusStats(e);
+          }
         } else {
-          console.log(`--<> dex: ${selectedClassStats.dex}`);
-        }
-        if (statBonuses.vit !== 0) {
           console.log(
-            `--<> vit: ${selectedClassStats.vit} +${statBonuses.vit}`
+            "you don't have enough points left to add that many to that skill. please try again."
           );
-        } else {
-          console.log(`--<> vit: ${selectedClassStats.vit}`);
+          console.log('');
+          handleBonusStats(e);
         }
-        if (statBonuses.def !== 0) {
-          console.log(
-            `--<> def: ${selectedClassStats.def} +${statBonuses.def}`
-          );
-        } else {
-          console.log(`--<> def: ${selectedClassStats.def}`);
-        }
-        if (statBonuses.agi !== 0) {
-          console.log(
-            `--<> agi: ${selectedClassStats.agi} +${statBonuses.agi}`
-          );
-        } else {
-          console.log(`--<> agi: ${selectedClassStats.agi}`);
-        }
-        if (statBonuses.arc !== 0) {
-          console.log(
-            `--<> arc: ${selectedClassStats.arc} +${statBonuses.arc}`
-          );
-        } else {
-          console.log(`--<> arc: ${selectedClassStats.arc}`);
-        }
-        if (statBonuses.pie !== 0) {
-          console.log(
-            `--<> pie: ${selectedClassStats.pie} +${statBonuses.pie}`
-          );
-        } else {
-          console.log(`--<> pie: ${selectedClassStats.pie}`);
-        }
-        console.log('');
-        handleBonusStats(e);
-      } else {
       }
     });
   }, 500);
