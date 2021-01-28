@@ -1,5 +1,4 @@
 const write = require('write');
-const save = require('./save');
 
 module.exports = (e) => {
   if (typeof e === 'string') {

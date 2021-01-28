@@ -10,6 +10,7 @@ const register = require('./F/register');
 const saveDataParser = require('./F/saveDataParser');
 const save = require('./F/save');
 const rollBonusStats = require('./F/rollBonusStats');
+const deleteSave = require('./F/deleteSave');
 
 module.exports = {
   readline,
@@ -20,4 +21,5 @@ module.exports = {
   saveDataParser,
   save,
   rollBonusStats,
+  deleteSave,
 };

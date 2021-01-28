@@ -21,6 +21,9 @@ module.exports = (e) => {
       console.log(e.F.save({ type: 'get' }));
       defaultConsole = true;
       break;
+    case '/delete':
+      e.F.deleteSave(e);
+      break;
 
     default:
       defaultConsole = true;
