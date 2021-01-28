@@ -17,6 +17,11 @@ module.exports = (e) => {
       defaultConsole = true;
       break;
 
+    case '/save':
+      console.log(e.F.save({ type: 'get' }));
+      defaultConsole = true;
+      break;
+
     default:
       defaultConsole = true;
       break;

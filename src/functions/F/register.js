@@ -280,9 +280,10 @@ const handleBonusStats = (e) => {
         let exceedsBns = false;
 
         if (parseInt(trueBonus) - usedPoints < 0) {
-          usedPoints -= parseInt(usedPointsHolder);
           exceedsBns = true;
+          usedPoints -= parseInt(usedPointsHolder);
         } else if (parseInt(trueBonus) - usedPoints === 0) {
+          exceedsBns = 'end';
           setTimeout(() => {
             regisFinalization(e);
           }, 500);
@@ -292,7 +293,7 @@ const handleBonusStats = (e) => {
 
         selectedClassStats.bns = bonusLeft;
 
-        if (exceedsBns === false) {
+        if (exceedsBns !== true) {
           statBonuses[stat] += statBonuses[stat] + bonusAmt;
 
           statBonuses = {
@@ -365,6 +366,7 @@ const handleBonusStats = (e) => {
             console.log('');
             handleBonusStats(e);
           }
+        } else if (exceedsBns === 'end') {
         } else {
           console.log(
             "you don't have enough points left to add that many to that skill. please try again."
@@ -391,9 +393,37 @@ const regisFinalization = (e) => {
     console.log(`--<> arc: ${selectedClassStats.arc + statBonuses.arc}`);
     console.log(`--<> pie: ${selectedClassStats.pie + statBonuses.pie}`);
     console.log('');
+
+    e.F.saveDataParser(
+      e.F.save({
+        data: {
+          stats: {
+            str: selectedClassStats.str + statBonuses.str,
+            dex: selectedClassStats.dex + statBonuses.dex,
+            vit: selectedClassStats.vit + statBonuses.vit,
+            def: selectedClassStats.def + statBonuses.def,
+            agi: selectedClassStats.agi + statBonuses.agi,
+            arc: selectedClassStats.arc + statBonuses.arc,
+            pie: selectedClassStats.pie + statBonuses.pie,
+          },
+        },
+        type: 'save',
+      })
+    );
+    console.log('switching to login...');
+    console.log('');
     e.F.login(e);
   }, 500);
 };
 module.exports = (e) => {
-  HandleUserPass(e);
+  if (e.F.save({ type: 'get' }).login === undefined) {
+    HandleUserPass(e);
+  } else {
+    console.log(
+      'there is already a save file, please use the command `/delete` beforehand to make a new account'
+    );
+    e.F.readline.question('', (res) => {
+      e.F.commandParser({ res: res, F: e.F });
+    });
+  }
 };

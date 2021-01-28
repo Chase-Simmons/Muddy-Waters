@@ -1,4 +1,5 @@
 const write = require('write');
+const save = require('./save');
 
 module.exports = (e) => {
   if (typeof e === 'string') {
@@ -30,10 +31,6 @@ module.exports = (e) => {
         dataKey = '';
         data = '';
       } else if (e[i] === '&') {
-        saveData = {
-          [groupKey]: {},
-        };
-
         for (let index = 0; index < dataArray.length; index++) {
           groupKeyObj = {
             ...groupKeyObj,
@@ -41,12 +38,16 @@ module.exports = (e) => {
           };
         }
         saveData = {
+          ...saveData,
           [groupKey]: groupKeyObj,
         };
 
         readingGroupKey = false;
         readingDataKey = false;
         readingData = false;
+        groupKey = '';
+        groupKeyObj = {};
+        dataArray = [];
       }
       if (readingGroupKey === true) {
         if (e[i] !== '*' && e[i] !== ':' && e[i] !== ',' && e[i] !== '&') {
@@ -74,8 +75,8 @@ module.exports = (e) => {
       for (const [dataKey, data] of Object.entries(groupKeyObj)) {
         unparsedSaveData += `${dataKey}:${data},`;
       }
+      unparsedSaveData += '&';
     }
-    unparsedSaveData += '&';
 
     write('src/save/data.txt', unparsedSaveData);
   }
