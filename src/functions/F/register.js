@@ -36,9 +36,9 @@ const HandleUserPass = (e) => {
         console.log('');
       }, 500);
 
-      e.F.saveDataParser({ login: { name, password } });
-      e.F.save({ data: { login: { name, password } }, type: 'save' });
-
+      e.F.saveDataParser(
+        e.F.save({ data: { login: { name, password } }, type: 'save' })
+      );
       setTimeout(() => {
         classSelection(e);
       }, 1000);
@@ -176,7 +176,7 @@ const classSelection = (e) => {
         '|---------------------------------------------------------------------------------------------|'
       );
       console.log(
-        '|      you will now roll your bonus stats, the banished class gets an addition 5 points       |'
+        '|      you will now roll your bonus stats, the banished class gets an additional 5 points     |'
       );
       console.log(
         '|---------------------------------------------------------------------------------------------|'
