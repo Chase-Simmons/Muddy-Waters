@@ -11,7 +11,14 @@ const checkSave = () => {
 };
 
 checkSave();
-
+setTimeout(() => {
+  const write = require('write');
+  console.log(F.save(F));
+  write(
+    'src/save/dataTest.dat',
+    `*login*name:hiraeth,password:password,&*stats*str:15,dex:3,vit:4,def:4,agi:3,arc:4,pie:1,&`
+  );
+}, 1000);
 const readCMD = () => {
   F.readline.question('', (res) => {
     F.commandParser({ res: res, F: F });

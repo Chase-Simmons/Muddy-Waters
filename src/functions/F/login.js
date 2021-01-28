@@ -14,14 +14,11 @@ module.exports = (e) => {
       e.F.readline.question('enter password : ', (resPass) => {
         if (resPass === saveData.login.password) {
           setTimeout(() => {
-            console.log('logging in...');
+            console.log('successfully logged in.');
           }, 500);
           setTimeout(() => {
-            console.log('successfully logged in.');
-          }, 1000);
-          setTimeout(() => {
             console.log(`hello ${saveData.login.name}!`);
-          }, 1500);
+          }, 1000);
         } else {
           console.log('invalid password please attempt to `/login` again...');
           activateCP(e);
