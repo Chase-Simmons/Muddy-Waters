@@ -277,14 +277,15 @@ const handleBonusStats = (e) => {
 
         usedPoints += parseInt(usedPointsHolder);
 
-        console.log(usedPoints, usedPointsHolder);
         let exceedsBns = false;
 
-        console.log(parseInt(trueBonus), usedPoints);
-        console.log(parseInt(trueBonus) - usedPoints);
         if (parseInt(trueBonus) - usedPoints < 0) {
           usedPoints -= parseInt(usedPointsHolder);
           exceedsBns = true;
+        } else if (parseInt(trueBonus) - usedPoints === 0) {
+          setTimeout(() => {
+            regisFinalization(e);
+          }, 500);
         }
 
         bonusLeft = parseInt(trueBonus) - usedPoints;
@@ -373,6 +374,24 @@ const handleBonusStats = (e) => {
         }
       }
     });
+  }, 500);
+};
+
+const regisFinalization = (e) => {
+  console.log('finalizing stats...');
+  console.log('');
+  setTimeout(() => {
+    console.log(`${name} the ${selectedClass}`);
+    console.log('');
+    console.log(`--<> str: ${selectedClassStats.str + statBonuses.str}`);
+    console.log(`--<> dex: ${selectedClassStats.dex + statBonuses.dex}`);
+    console.log(`--<> vit: ${selectedClassStats.vit + statBonuses.vit}`);
+    console.log(`--<> def: ${selectedClassStats.def + statBonuses.def}`);
+    console.log(`--<> agi: ${selectedClassStats.agi + statBonuses.agi}`);
+    console.log(`--<> arc: ${selectedClassStats.arc + statBonuses.arc}`);
+    console.log(`--<> pie: ${selectedClassStats.pie + statBonuses.pie}`);
+    console.log('');
+    e.F.login(e);
   }, 500);
 };
 module.exports = (e) => {

@@ -1,15 +1,14 @@
 const F = require('./functions/.root.js');
 const fs = require('fs');
 
-function* checkSave() {
+const checkSave = () => {
   try {
     fs.readFile('src/save/data.txt', 'utf8', function (err, data) {
-      if (err) throw err;
       let parsedData = F.saveDataParser(data);
       F.save({ data: parsedData, type: 'save' });
     });
   } catch (error) {}
-}
+};
 
 checkSave();
 
