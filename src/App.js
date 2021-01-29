@@ -10,7 +10,7 @@ const checkSave = () => {
   } catch (error) {}
 };
 
-console.log(F.recrypt());
+F.recrypt();
 
 checkSave();
 
