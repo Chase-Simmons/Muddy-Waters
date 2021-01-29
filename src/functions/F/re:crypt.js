@@ -124,6 +124,54 @@ const encrypt = () => {
             break;
         }
         break;
+      case 'h':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0101100010';
+            break;
+          case 2:
+            encryptedString += '0010110000';
+            break;
+          case 3:
+            encryptedString += '0001011000';
+            break;
+          case 4:
+            encryptedString += '0000101100';
+            break;
+        }
+        break;
+      case 'i':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0101110010';
+            break;
+          case 2:
+            encryptedString += '0010111000';
+            break;
+          case 3:
+            encryptedString += '0001011100';
+            break;
+          case 4:
+            encryptedString += '0000101110';
+            break;
+        }
+        break;
+      case 'j':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0101111010';
+            break;
+          case 2:
+            encryptedString += '0010111100';
+            break;
+          case 3:
+            encryptedString += '0001011110';
+            break;
+          case 4:
+            encryptedString += '0000101111';
+            break;
+        }
+        break;
       case '`':
         switch (ranNum()) {
           case 1:
