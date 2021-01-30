@@ -172,6 +172,246 @@ const encrypt = () => {
             break;
         }
         break;
+      case 'k':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'l':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'm':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'n':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'o':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'p':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'q':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'r':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 's':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 't':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'u':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'v':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'x':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'y':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
+      case 'z':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '0';
+            break;
+          case 2:
+            encryptedString += '00';
+            break;
+          case 3:
+            encryptedString += '000';
+            break;
+          case 4:
+            encryptedString += '0000';
+            break;
+        }
+        break;
       case '`':
         switch (ranNum()) {
           case 1:
