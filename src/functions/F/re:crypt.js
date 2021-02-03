@@ -78,7 +78,7 @@ const encrypt = () => {
       case 'e':
         switch (ranNum()) {
           case 1:
-            encryptedString += '000001010';
+            encryptedString += '0000001010';
             break;
           case 2:
             encryptedString += '0100001010';
@@ -537,57 +537,23 @@ const decrypt = () => {
       encryptionBlock[i] === '0101001000'
     ) {
       decryptedString += 'c';
+    } else if (
+      encryptionBlock[i] === '0000101010' ||
+      encryptionBlock[i] === '0100010010' ||
+      encryptionBlock[i] === '0100001010' ||
+      encryptionBlock[i] === '0101000100'
+    ) {
+      decryptedString += 'd';
+    } else if (
+      encryptionBlock[i] === '0000001010' ||
+      encryptionBlock[i] === '0100001010' ||
+      encryptionBlock[i] === '0100000110' ||
+      encryptionBlock[i] === '0101000010'
+    ) {
+      decryptedString += 'e';
     }
 
     switch (encryptionBlock[i]) {
-      case 'c':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0001001010';
-            break;
-          case 2:
-            encryptedString += '0100100010';
-            break;
-          case 3:
-            encryptedString += '0100010010';
-            break;
-          case 4:
-            encryptedString += '0101001000';
-            break;
-        }
-        break;
-      case 'd':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0000101010';
-            break;
-          case 2:
-            encryptedString += '0100010010';
-            break;
-          case 3:
-            encryptedString += '0100001010';
-            break;
-          case 4:
-            encryptedString += '0101000100';
-            break;
-        }
-        break;
-      case 'e':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '000001010';
-            break;
-          case 2:
-            encryptedString += '0100001010';
-            break;
-          case 3:
-            encryptedString += '0100000110';
-            break;
-          case 4:
-            encryptedString += '0101000010';
-            break;
-        }
-        break;
       case 'f':
         switch (ranNum()) {
           case 1:
