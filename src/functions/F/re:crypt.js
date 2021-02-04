@@ -586,6 +586,13 @@ const decrypt = () => {
       encryptionBlock[i] === '0101011000'
     ) {
       decryptedString += 'j';
+    } else if (
+      encryptionBlock[i] === '0011101010' ||
+      encryptionBlock[i] === '0101110010' ||
+      encryptionBlock[i] === '0100111010' ||
+      encryptionBlock[i] === '0101011100'
+    ) {
+      decryptedString += 'k';
     }
 
     switch (encryptionBlock[i]) {
