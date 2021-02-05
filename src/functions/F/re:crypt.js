@@ -593,329 +593,132 @@ const decrypt = () => {
       encryptionBlock[i] === '0101011100'
     ) {
       decryptedString += 'k';
-    }
-
-    switch (encryptionBlock[i]) {
-      case 'k':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0011101010';
-            break;
-          case 2:
-            encryptedString += '0101110010';
-            break;
-          case 3:
-            encryptedString += '0100111010';
-            break;
-          case 4:
-            encryptedString += '0101011100';
-            break;
-        }
-        break;
-      case 'l':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0011111010';
-            break;
-          case 2:
-            encryptedString += '0101111010';
-            break;
-          case 3:
-            encryptedString += '0100111110';
-            break;
-          case 4:
-            encryptedString += '0101011110';
-            break;
-        }
-        break;
-      case 'm':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0001001010';
-            break;
-          case 2:
-            encryptedString += '0100100010';
-            break;
-          case 3:
-            encryptedString += '0100010010';
-            break;
-          case 4:
-            encryptedString += '0101001000';
-            break;
-        }
-        break;
-      case 'n':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0001101010';
-            break;
-          case 2:
-            encryptedString += '0100110010';
-            break;
-          case 3:
-            encryptedString += '0100011010';
-            break;
-          case 4:
-            encryptedString += '0101001100';
-            break;
-        }
-        break;
-      case 'o':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0001111010';
-            break;
-          case 2:
-            encryptedString += '0100111010';
-            break;
-          case 3:
-            encryptedString += '0100011110';
-            break;
-          case 4:
-            encryptedString += '0101001110';
-            break;
-        }
-        break;
-      case 'p':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0000101010';
-            break;
-          case 2:
-            encryptedString += '0100010010';
-            break;
-          case 3:
-            encryptedString += '0100001010';
-            break;
-          case 4:
-            encryptedString += '0101000100';
-            break;
-        }
-        break;
-      case 'q':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0000111010';
-            break;
-          case 2:
-            encryptedString += '0100011010';
-            break;
-          case 3:
-            encryptedString += '0100001110';
-            break;
-          case 4:
-            encryptedString += '0101000110';
-            break;
-        }
-        break;
-      case 'r':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '0000011010';
-            break;
-          case 2:
-            encryptedString += '0100001010';
-            break;
-          case 3:
-            encryptedString += '0100000110';
-            break;
-          case 4:
-            encryptedString += '0101000010';
-            break;
-        }
-        break;
-      case 's':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1100000101';
-            break;
-          case 2:
-            encryptedString += '1010000101';
-            break;
-          case 3:
-            encryptedString += '1011000001';
-            break;
-          case 4:
-            encryptedString += '1010100001';
-            break;
-        }
-        break;
-      case 't':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1110000101';
-            break;
-          case 2:
-            encryptedString += '1011000101';
-            break;
-          case 3:
-            encryptedString += '1011100001';
-            break;
-          case 4:
-            encryptedString += '1010110001';
-            break;
-        }
-        break;
-      case 'u':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1111000101';
-            break;
-          case 2:
-            encryptedString += '1011100101';
-            break;
-          case 3:
-            encryptedString += '1011110001';
-            break;
-          case 4:
-            encryptedString += '1010111001';
-            break;
-        }
-        break;
-      case 'v':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1111100101';
-            break;
-          case 2:
-            encryptedString += '1011110101';
-            break;
-          case 3:
-            encryptedString += '1011111001';
-            break;
-          case 4:
-            encryptedString += '1010111101';
-            break;
-        }
-        break;
-      case 'x':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1111110101';
-            break;
-          case 2:
-            encryptedString += '1011111101';
-            break;
-          case 3:
-            encryptedString += '1011111101';
-            break;
-          case 4:
-            encryptedString += '1010111111';
-            break;
-        }
-        break;
-      case 'y':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1101110101';
-            break;
-          case 2:
-            encryptedString += '1010111101';
-            break;
-          case 3:
-            encryptedString += '1011011101';
-            break;
-          case 4:
-            encryptedString += '1010101111';
-            break;
-        }
-        break;
-      case 'z':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1110110101';
-            break;
-          case 2:
-            encryptedString += '1011011101';
-            break;
-          case 3:
-            encryptedString += '1011101101';
-            break;
-          case 4:
-            encryptedString += '1010110111';
-            break;
-        }
-        break;
-      case '*':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1010000101';
-            break;
-          case 2:
-            encryptedString += '1001000101';
-            break;
-          case 3:
-            encryptedString += '1010100001';
-            break;
-          case 4:
-            encryptedString += '1010010001';
-            break;
-        }
-        break;
-      case ':':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1011000101';
-            break;
-          case 2:
-            encryptedString += '1001100101';
-            break;
-          case 3:
-            encryptedString += '1010110001';
-            break;
-          case 4:
-            encryptedString += '1010011001';
-            break;
-        }
-        break;
-      case ',':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1011100101';
-            break;
-          case 2:
-            encryptedString += '1001110101';
-            break;
-          case 3:
-            encryptedString += '1010111001';
-            break;
-          case 4:
-            encryptedString += '1010011101';
-            break;
-        }
-        break;
-      case '&':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1011110101';
-            break;
-          case 2:
-            encryptedString += '1001111101';
-            break;
-          case 3:
-            encryptedString += '1010111101';
-            break;
-          case 4:
-            encryptedString += '1010011111';
-            break;
-        }
-        break;
-      case '`':
-        switch (ranNum()) {
-          case 1:
-            encryptedString += '1 0101';
-            break;
-          case 2:
-            encryptedString += '10 101';
-            break;
-          case 3:
-            encryptedString += '101 01';
-            break;
-          case 4:
-            encryptedString += '1010 1';
-            break;
-        }
-        break;
+    } else if (
+      encryptionBlock[i] === '0011111010' ||
+      encryptionBlock[i] === '0101111010' ||
+      encryptionBlock[i] === '0100111110' ||
+      encryptionBlock[i] === '0101011110'
+    ) {
+      decryptedString += 'l';
+    } else if (
+      encryptionBlock[i] === '0001001010' ||
+      encryptionBlock[i] === '0100100010' ||
+      encryptionBlock[i] === '0100010010' ||
+      encryptionBlock[i] === '0101001000'
+    ) {
+      decryptedString += 'm';
+    } else if (
+      encryptionBlock[i] === '0001101010' ||
+      encryptionBlock[i] === '0100110010' ||
+      encryptionBlock[i] === '0100011010' ||
+      encryptionBlock[i] === '0101001100'
+    ) {
+      decryptedString += 'n';
+    } else if (
+      encryptionBlock[i] === '0001111010' ||
+      encryptionBlock[i] === '0100111010' ||
+      encryptionBlock[i] === '0100011110' ||
+      encryptionBlock[i] === '0101001110'
+    ) {
+      decryptedString += 'o';
+    } else if (
+      encryptionBlock[i] === '0000101010' ||
+      encryptionBlock[i] === '0100010010' ||
+      encryptionBlock[i] === '0100001010' ||
+      encryptionBlock[i] === '0101000100'
+    ) {
+      decryptedString += 'p';
+    } else if (
+      encryptionBlock[i] === '0000111010' ||
+      encryptionBlock[i] === '0100011010' ||
+      encryptionBlock[i] === '0100001110' ||
+      encryptionBlock[i] === '0101000110'
+    ) {
+      decryptedString += 'q';
+    } else if (
+      encryptionBlock[i] === '0000011010' ||
+      encryptionBlock[i] === '0100001010' ||
+      encryptionBlock[i] === '0100000110' ||
+      encryptionBlock[i] === '0101000010'
+    ) {
+      decryptedString += 'r';
+    } else if (
+      encryptionBlock[i] === '1100000101' ||
+      encryptionBlock[i] === '1010000101' ||
+      encryptionBlock[i] === '1011000001' ||
+      encryptionBlock[i] === '1010100001'
+    ) {
+      decryptedString += 's';
+    } else if (
+      encryptionBlock[i] === '1110000101' ||
+      encryptionBlock[i] === '1011000101' ||
+      encryptionBlock[i] === '1011100001' ||
+      encryptionBlock[i] === '1010110001'
+    ) {
+      decryptedString += 't';
+    } else if (
+      encryptionBlock[i] === '1111000101' ||
+      encryptionBlock[i] === '1011100101' ||
+      encryptionBlock[i] === '1011110001' ||
+      encryptionBlock[i] === '1010111001'
+    ) {
+      decryptedString += 'u';
+    } else if (
+      encryptionBlock[i] === '1111100101' ||
+      encryptionBlock[i] === '1011110101' ||
+      encryptionBlock[i] === '1011111001' ||
+      encryptionBlock[i] === '1010111101'
+    ) {
+      decryptedString += 'v';
+    } else if (
+      encryptionBlock[i] === '1111110101' ||
+      encryptionBlock[i] === '1011111101' ||
+      encryptionBlock[i] === '1011111101' ||
+      encryptionBlock[i] === '1010111111'
+    ) {
+      decryptedString += 'x';
+    } else if (
+      encryptionBlock[i] === '1101110101' ||
+      encryptionBlock[i] === '1010111101' ||
+      encryptionBlock[i] === '1011011101' ||
+      encryptionBlock[i] === '1010101111'
+    ) {
+      decryptedString += 'y';
+    } else if (
+      encryptionBlock[i] === '1110110101' ||
+      encryptionBlock[i] === '1011011101' ||
+      encryptionBlock[i] === '1011101101' ||
+      encryptionBlock[i] === '1010110111'
+    ) {
+      decryptedString += 'z';
+    } else if (
+      encryptionBlock[i] === '1010000101' ||
+      encryptionBlock[i] === '1001000101' ||
+      encryptionBlock[i] === '1010100001' ||
+      encryptionBlock[i] === '1010010001'
+    ) {
+      decryptedString += '*';
+    } else if (
+      encryptionBlock[i] === '1011000101' ||
+      encryptionBlock[i] === '1001100101' ||
+      encryptionBlock[i] === '1010110001' ||
+      encryptionBlock[i] === '1010011001'
+    ) {
+      decryptedString += ':';
+    } else if (
+      encryptionBlock[i] === '1011100101' ||
+      encryptionBlock[i] === '1001110101' ||
+      encryptionBlock[i] === '1010111001' ||
+      encryptionBlock[i] === '1010011101'
+    ) {
+      decryptedString += ',';
+    } else if (
+      encryptionBlock[i] === '1011110101' ||
+      encryptionBlock[i] === '1001111101' ||
+      encryptionBlock[i] === '1010111101' ||
+      encryptionBlock[i] === '1010011111'
+    ) {
+      decryptedString += '&';
     }
   }
   console.log(decryptedString);
