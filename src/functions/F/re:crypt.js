@@ -2,7 +2,8 @@ let encryptedString = '';
 let decryptedString = '';
 
 const ranNum = () => {
-  const number = Math.floor(Math.random() * 4) + 1;
+  let number = Math.floor(Math.random() * 4) + 1;
+  number = 1;
   return number;
 };
 const encrypt = () => {
