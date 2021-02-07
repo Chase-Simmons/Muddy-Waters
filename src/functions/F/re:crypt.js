@@ -1,6 +1,26 @@
 let encryptedString = '';
 let decryptedString = '';
 
+const a1 = '0100001010';
+const a2 = '0100001010';
+const a3 = '0100001010';
+const a4 = '0100001010';
+
+const b1 = '0010001010';
+const b2 = '0010001010';
+const b3 = '0010001010';
+const b4 = '0010001010';
+
+const c1 = '0001001010';
+const c2 = '0001001010';
+const c3 = '0001001010';
+const c4 = '0001001010';
+
+const d1 = '0000101010';
+const d2 = '0000101010';
+const d3 = '0000101010';
+const d4 = '0000101010';
+
 const ranNum = () => {
   let number = Math.floor(Math.random() * 4) + 1;
   number = 1;
@@ -207,7 +227,7 @@ const encrypt = () => {
       case 'm':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0001001010';
+            encryptedString += '0001001011';
             break;
           case 2:
             encryptedString += '0100100010';
@@ -255,7 +275,7 @@ const encrypt = () => {
       case 'p':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0000101010';
+            encryptedString += '0000101011';
             break;
           case 2:
             encryptedString += '0100010010';
