@@ -36,6 +36,26 @@ const g2 = '0111001010';
 const g3 = '0111001010';
 const g4 = '0111001010';
 
+const h1 = '0111101010';
+const h2 = '0111101010';
+const h3 = '0111101010';
+const h4 = '0111101010';
+
+const i1 = '0111111010';
+const i2 = '0111111010';
+const i3 = '0111111010';
+const i4 = '0111111010';
+
+const j1 = '0011001010';
+const j2 = '0011001010';
+const j3 = '0011001010';
+const j4 = '0011001010';
+
+const k1 = '0011101010';
+const k2 = '0011101010';
+const k3 = '0011101010';
+const k4 = '0011101010';
+
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
   return number;
@@ -161,64 +181,64 @@ const encrypt = () => {
       case 'h':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0111101010';
+            encryptedString += h1;
             break;
           case 2:
-            encryptedString += '0111110010';
+            encryptedString += h2;
             break;
           case 3:
-            encryptedString += '0101111010';
+            encryptedString += h3;
             break;
           case 4:
-            encryptedString += '0101111100';
+            encryptedString += h4;
             break;
         }
         break;
       case 'i':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0111111010';
+            encryptedString += i1;
             break;
           case 2:
-            encryptedString += '0111111010';
+            encryptedString += i2;
             break;
           case 3:
-            encryptedString += '0101111110';
+            encryptedString += i3;
             break;
           case 4:
-            encryptedString += '0101111110';
+            encryptedString += i4;
             break;
         }
         break;
       case 'j':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0011001010';
+            encryptedString += j1;
             break;
           case 2:
-            encryptedString += '0101100010';
+            encryptedString += j2;
             break;
           case 3:
-            encryptedString += '0100110010';
+            encryptedString += j3;
             break;
           case 4:
-            encryptedString += '0101011000';
+            encryptedString += j4;
             break;
         }
         break;
       case 'k':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0011101010';
+            encryptedString += k1;
             break;
           case 2:
-            encryptedString += '0101110010';
+            encryptedString += k2;
             break;
           case 3:
-            encryptedString += '0100111010';
+            encryptedString += k3;
             break;
           case 4:
-            encryptedString += '0101011100';
+            encryptedString += k4;
             break;
         }
         break;
@@ -601,31 +621,31 @@ const decrypt = () => {
     ) {
       decryptedString += 'g';
     } else if (
-      encryptionBlock[i] === '0111101010' ||
-      encryptionBlock[i] === '0111110010' ||
-      encryptionBlock[i] === '0101111010' ||
-      encryptionBlock[i] === '0101111100'
+      encryptionBlock[i] === h1 ||
+      encryptionBlock[i] === h2 ||
+      encryptionBlock[i] === h3 ||
+      encryptionBlock[i] === h4
     ) {
       decryptedString += 'h';
     } else if (
-      encryptionBlock[i] === '0111111010' ||
-      encryptionBlock[i] === '0111111010' ||
-      encryptionBlock[i] === '0101111110' ||
-      encryptionBlock[i] === '0101111110'
+      encryptionBlock[i] === i1 ||
+      encryptionBlock[i] === i2 ||
+      encryptionBlock[i] === i3 ||
+      encryptionBlock[i] === i4
     ) {
       decryptedString += 'i';
     } else if (
-      encryptionBlock[i] === '0011001010' ||
-      encryptionBlock[i] === '0101100010' ||
-      encryptionBlock[i] === '0100110010' ||
-      encryptionBlock[i] === '0101011000'
+      encryptionBlock[i] === j1 ||
+      encryptionBlock[i] === j2 ||
+      encryptionBlock[i] === j3 ||
+      encryptionBlock[i] === j4
     ) {
       decryptedString += 'j';
     } else if (
-      encryptionBlock[i] === '0011101010' ||
-      encryptionBlock[i] === '0101110010' ||
-      encryptionBlock[i] === '0100111010' ||
-      encryptionBlock[i] === '0101011100'
+      encryptionBlock[i] === k1 ||
+      encryptionBlock[i] === k2 ||
+      encryptionBlock[i] === k3 ||
+      encryptionBlock[i] === k4
     ) {
       decryptedString += 'k';
     } else if (
