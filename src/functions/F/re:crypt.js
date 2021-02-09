@@ -56,6 +56,12 @@ const k2 = '0011101010';
 const k3 = '0011101010';
 const k4 = '0011101010';
 
+const l1 = '';
+const l2 = '';
+const l3 = '';
+const l4 = '';
+
+
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
   return number;
