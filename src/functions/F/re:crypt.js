@@ -61,6 +61,10 @@ const l2 = '';
 const l3 = '';
 const l4 = '';
 
+const m1 = '';
+const m2 = '';
+const m3 = '';
+const m4 = '';
 
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
