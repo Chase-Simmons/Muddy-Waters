@@ -66,6 +66,71 @@ const m2 = '';
 const m3 = '';
 const m4 = '';
 
+const n1 = '';
+const n2 = '';
+const n3 = '';
+const n4 = '';
+
+const o1 = '';
+const o2 = '';
+const o3 = '';
+const o4 = '';
+
+const p1 = '';
+const p2 = '';
+const p3 = '';
+const p4 = '';
+
+const q1 = '';
+const q2 = '';
+const q3 = '';
+const q4 = '';
+
+const r1 = '';
+const r2 = '';
+const r3 = '';
+const r4 = '';
+
+const s1 = '';
+const s2 = '';
+const s3 = '';
+const s4 = '';
+
+const t1 = '';
+const t2 = '';
+const t3 = '';
+const t4 = '';
+
+const u1 = '';
+const u2 = '';
+const u3 = '';
+const u4 = '';
+
+const v1 = '';
+const v2 = '';
+const v3 = '';
+const v4 = '';
+
+const w1 = '';
+const w2 = '';
+const w3 = '';
+const w4 = '';
+
+const x1 = '';
+const x2 = '';
+const x3 = '';
+const x4 = '';
+
+const y1 = '';
+const y2 = '';
+const y3 = '';
+const y4 = '';
+
+const z1 = '';
+const z2 = '';
+const z3 = '';
+const z4 = '';
+
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
   return number;
@@ -428,6 +493,23 @@ const encrypt = () => {
             break;
         }
         break;
+
+      case 'w':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += '';
+            break;
+          case 2:
+            encryptedString += '';
+            break;
+          case 3:
+            encryptedString += '';
+            break;
+          case 4:
+            encryptedString += '';
+            break;
+        }
+        break;
       case 'x':
         switch (ranNum()) {
           case 1:
@@ -735,6 +817,13 @@ const decrypt = () => {
       encryptionBlock[i] === '1010111101'
     ) {
       decryptedString += 'v';
+    } else if (
+      encryptionBlock[i] === '' ||
+      encryptionBlock[i] === '' ||
+      encryptionBlock[i] === '' ||
+      encryptionBlock[i] === ''
+    ) {
+      decryptedString += 'w';
     } else if (
       encryptionBlock[i] === '1111110101' ||
       encryptionBlock[i] === '1011111101' ||
