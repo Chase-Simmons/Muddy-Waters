@@ -56,80 +56,150 @@ const k2 = '0011101010';
 const k3 = '0011101010';
 const k4 = '0011101010';
 
-const l1 = '';
-const l2 = '';
-const l3 = '';
-const l4 = '';
+const l1 = '0011111010';
+const l2 = '0011111010';
+const l3 = '0011111010';
+const l4 = '0011111010';
 
-const m1 = '';
-const m2 = '';
-const m3 = '';
-const m4 = '';
+const m1 = '0001001011';
+const m2 = '0001001011';
+const m3 = '0001001011';
+const m4 = '0001001011';
 
-const n1 = '';
-const n2 = '';
-const n3 = '';
-const n4 = '';
+const n1 = '0001101010';
+const n2 = '0001101010';
+const n3 = '0001101010';
+const n4 = '0001101010';
 
-const o1 = '';
-const o2 = '';
-const o3 = '';
-const o4 = '';
+const o1 = '0001111010';
+const o2 = '0001111010';
+const o3 = '0001111010';
+const o4 = '0001111010';
 
-const p1 = '';
-const p2 = '';
-const p3 = '';
-const p4 = '';
+const p1 = '0000101011';
+const p2 = '0000101011';
+const p3 = '0000101011';
+const p4 = '0000101011';
 
-const q1 = '';
-const q2 = '';
-const q3 = '';
-const q4 = '';
+const q1 = '0000111010';
+const q2 = '0000111010';
+const q3 = '0000111010';
+const q4 = '0000111010';
 
-const r1 = '';
-const r2 = '';
-const r3 = '';
-const r4 = '';
+const r1 = '0000011010';
+const r2 = '0000011010';
+const r3 = '0000011010';
+const r4 = '0000011010';
 
-const s1 = '';
-const s2 = '';
-const s3 = '';
-const s4 = '';
+const s1 = '1100000101';
+const s2 = '1100000101';
+const s3 = '1100000101';
+const s4 = '1100000101';
 
-const t1 = '';
-const t2 = '';
-const t3 = '';
-const t4 = '';
+const t1 = '1110000101';
+const t2 = '1110000101';
+const t3 = '1110000101';
+const t4 = '1110000101';
 
-const u1 = '';
-const u2 = '';
-const u3 = '';
-const u4 = '';
+const u1 = '1111000101';
+const u2 = '1111000101';
+const u3 = '1111000101';
+const u4 = '1111000101';
 
-const v1 = '';
-const v2 = '';
-const v3 = '';
-const v4 = '';
+const v1 = '1111100101';
+const v2 = '1111100101';
+const v3 = '1111100101';
+const v4 = '1111100101';
 
-const w1 = '';
-const w2 = '';
-const w3 = '';
-const w4 = '';
+const w1 = '1010100101';
+const w2 = '1010100101';
+const w3 = '1010100101';
+const w4 = '1010100101';
 
-const x1 = '';
-const x2 = '';
-const x3 = '';
-const x4 = '';
+const x1 = '1111110101';
+const x2 = '1111110101';
+const x3 = '1111110101';
+const x4 = '1111110101';
 
-const y1 = '';
-const y2 = '';
-const y3 = '';
-const y4 = '';
+const y1 = '1101110101';
+const y2 = '1101110101';
+const y3 = '1101110101';
+const y4 = '1101110101';
 
-const z1 = '';
-const z2 = '';
-const z3 = '';
-const z4 = '';
+const z1 = '1110110101';
+const z2 = '1110110101';
+const z3 = '1110110101';
+const z4 = '1110110101';
+
+const zero1 = '0010010010';
+const zero2 = '0010010010';
+const zero3 = '0010010010';
+const zero4 = '0010010010';
+
+const one1 = '0010010011';
+const one2 = '0010010011';
+const one3 = '0010010011';
+const one4 = '0010010011';
+
+const two1 = '0010010111';
+const two2 = '0010010111';
+const two3 = '0010010111';
+const two4 = '0010010111';
+
+const three1 = '0010011111';
+const three2 = '0010011111';
+const three3 = '0010011111';
+const three4 = '0010011111';
+
+const four1 = '0010111111';
+const four2 = '0010111111';
+const four3 = '0010111111';
+const four4 = '0010111111';
+
+const five1 = '0011111111';
+const five2 = '0011111111';
+const five3 = '0011111111';
+const five4 = '0011111111';
+
+const six1 = '0011111011';
+const six2 = '0011111011';
+const six3 = '0011111011';
+const six4 = '0011111011';
+
+const seven1 = '0011101011';
+const seven2 = '0011101011';
+const seven3 = '0011101011';
+const seven4 = '0011101011';
+
+const eight1 = '0011101111';
+const eight2 = '0011101111';
+const eight3 = '0011101111';
+const eight4 = '0011101111';
+
+const nine1 = '0011101101';
+const nine2 = '0011101101';
+const nine3 = '0011101101';
+const nine4 = '0011101101';
+
+const splat1 = '1010000101';
+const splat2 = '1010000101';
+const splat3 = '1010000101';
+const splat4 = '1010000101';
+
+const colon1 = '1011000101';
+const colon2 = '1011000101';
+const colon3 = '1011000101';
+const colon4 = '1011000101';
+
+const comma1 = '1011100101';
+const comma2 = '1011100101';
+const comma3 = '1011100101';
+const comma4 = '1011100101';
+
+const ampersand1 = '1011110101';
+const ampersand2 = '1011110101';
+const ampersand3 = '1011110101';
+const ampersand4 = '1011110101';
 
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
@@ -320,176 +390,176 @@ const encrypt = () => {
       case 'l':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0011111010';
+            encryptedString += l1;
             break;
           case 2:
-            encryptedString += '0101111010';
+            encryptedString += l2;
             break;
           case 3:
-            encryptedString += '0100111110';
+            encryptedString += l3;
             break;
           case 4:
-            encryptedString += '0101011110';
+            encryptedString += l4;
             break;
         }
         break;
       case 'm':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0001001011';
+            encryptedString += m1;
             break;
           case 2:
-            encryptedString += '0100100010';
+            encryptedString += m2;
             break;
           case 3:
-            encryptedString += '0100010010';
+            encryptedString += m3;
             break;
           case 4:
-            encryptedString += '0101001000';
+            encryptedString += m4;
             break;
         }
         break;
       case 'n':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0001101010';
+            encryptedString += n1;
             break;
           case 2:
-            encryptedString += '0100110010';
+            encryptedString += n2;
             break;
           case 3:
-            encryptedString += '0100011010';
+            encryptedString += n3;
             break;
           case 4:
-            encryptedString += '0101001100';
+            encryptedString += n4;
             break;
         }
         break;
       case 'o':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0001111010';
+            encryptedString += o1;
             break;
           case 2:
-            encryptedString += '0100111010';
+            encryptedString += o2;
             break;
           case 3:
-            encryptedString += '0100011110';
+            encryptedString += o3;
             break;
           case 4:
-            encryptedString += '0101001110';
+            encryptedString += o4;
             break;
         }
         break;
       case 'p':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0000101011';
+            encryptedString += p1;
             break;
           case 2:
-            encryptedString += '0100010010';
+            encryptedString += p2;
             break;
           case 3:
-            encryptedString += '0100001010';
+            encryptedString += p3;
             break;
           case 4:
-            encryptedString += '0101000100';
+            encryptedString += p4;
             break;
         }
         break;
       case 'q':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0000111010';
+            encryptedString += q1;
             break;
           case 2:
-            encryptedString += '0100011010';
+            encryptedString += q2;
             break;
           case 3:
-            encryptedString += '0100001110';
+            encryptedString += q3;
             break;
           case 4:
-            encryptedString += '0101000110';
+            encryptedString += q4;
             break;
         }
         break;
       case 'r':
         switch (ranNum()) {
           case 1:
-            encryptedString += '0000011010';
+            encryptedString += r1;
             break;
           case 2:
-            encryptedString += '0100001010';
+            encryptedString += r2;
             break;
           case 3:
-            encryptedString += '0100000110';
+            encryptedString += r3;
             break;
           case 4:
-            encryptedString += '0101000010';
+            encryptedString += r4;
             break;
         }
         break;
       case 's':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1100000101';
+            encryptedString += s1;
             break;
           case 2:
-            encryptedString += '1010000101';
+            encryptedString += s2;
             break;
           case 3:
-            encryptedString += '1011000001';
+            encryptedString += s3;
             break;
           case 4:
-            encryptedString += '1010100001';
+            encryptedString += s4;
             break;
         }
         break;
       case 't':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1110000101';
+            encryptedString += t1;
             break;
           case 2:
-            encryptedString += '1011000101';
+            encryptedString += t2;
             break;
           case 3:
-            encryptedString += '1011100001';
+            encryptedString += t3;
             break;
           case 4:
-            encryptedString += '1010110001';
+            encryptedString += t4;
             break;
         }
         break;
       case 'u':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1111000101';
+            encryptedString += u1;
             break;
           case 2:
-            encryptedString += '1011100101';
+            encryptedString += u2;
             break;
           case 3:
-            encryptedString += '1011110001';
+            encryptedString += u3;
             break;
           case 4:
-            encryptedString += '1010111001';
+            encryptedString += u4;
             break;
         }
         break;
       case 'v':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1111100101';
+            encryptedString += v1;
             break;
           case 2:
-            encryptedString += '1011110101';
+            encryptedString += v2;
             break;
           case 3:
-            encryptedString += '1011111001';
+            encryptedString += v3;
             break;
           case 4:
-            encryptedString += '1010111101';
+            encryptedString += v4;
             break;
         }
         break;
@@ -497,128 +567,288 @@ const encrypt = () => {
       case 'w':
         switch (ranNum()) {
           case 1:
-            encryptedString += '';
+            encryptedString += w1;
             break;
           case 2:
-            encryptedString += '';
+            encryptedString += w2;
             break;
           case 3:
-            encryptedString += '';
+            encryptedString += w3;
             break;
           case 4:
-            encryptedString += '';
+            encryptedString += w4;
             break;
         }
         break;
       case 'x':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1111110101';
+            encryptedString += x1;
             break;
           case 2:
-            encryptedString += '1011111101';
+            encryptedString += x2;
             break;
           case 3:
-            encryptedString += '1011111101';
+            encryptedString += x3;
             break;
           case 4:
-            encryptedString += '1010111111';
+            encryptedString += x4;
             break;
         }
         break;
       case 'y':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1101110101';
+            encryptedString += y1;
             break;
           case 2:
-            encryptedString += '1010111101';
+            encryptedString += y2;
             break;
           case 3:
-            encryptedString += '1011011101';
+            encryptedString += y3;
             break;
           case 4:
-            encryptedString += '1010101111';
+            encryptedString += y4;
             break;
         }
         break;
       case 'z':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1110110101';
+            encryptedString += z1;
             break;
           case 2:
-            encryptedString += '1011011101';
+            encryptedString += z2;
             break;
           case 3:
-            encryptedString += '1011101101';
+            encryptedString += z3;
             break;
           case 4:
-            encryptedString += '1010110111';
+            encryptedString += z4;
+            break;
+        }
+        break;
+      case '0':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += zero1;
+            break;
+          case 2:
+            encryptedString += zero2;
+            break;
+          case 3:
+            encryptedString += zero3;
+            break;
+          case 4:
+            encryptedString += zero4;
+            break;
+        }
+        break;
+      case '1':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += one1;
+            break;
+          case 2:
+            encryptedString += one2;
+            break;
+          case 3:
+            encryptedString += one3;
+            break;
+          case 4:
+            encryptedString += one4;
+            break;
+        }
+        break;
+      case '2':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += two1;
+            break;
+          case 2:
+            encryptedString += two2;
+            break;
+          case 3:
+            encryptedString += two3;
+            break;
+          case 4:
+            encryptedString += two4;
+            break;
+        }
+        break;
+      case '3':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += three1;
+            break;
+          case 2:
+            encryptedString += three2;
+            break;
+          case 3:
+            encryptedString += three3;
+            break;
+          case 4:
+            encryptedString += three4;
+            break;
+        }
+        break;
+      case '4':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += four1;
+            break;
+          case 2:
+            encryptedString += four2;
+            break;
+          case 3:
+            encryptedString += four3;
+            break;
+          case 4:
+            encryptedString += four4;
+            break;
+        }
+        break;
+      case '5':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += five1;
+            break;
+          case 2:
+            encryptedString += five2;
+            break;
+          case 3:
+            encryptedString += five3;
+            break;
+          case 4:
+            encryptedString += five4;
+            break;
+        }
+        break;
+      case '6':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += six1;
+            break;
+          case 2:
+            encryptedString += six2;
+            break;
+          case 3:
+            encryptedString += six3;
+            break;
+          case 4:
+            encryptedString += six4;
+            break;
+        }
+        break;
+      case '7':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += seven1;
+            break;
+          case 2:
+            encryptedString += seven2;
+            break;
+          case 3:
+            encryptedString += seven3;
+            break;
+          case 4:
+            encryptedString += seven4;
+            break;
+        }
+        break;
+      case '8':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += eight1;
+            break;
+          case 2:
+            encryptedString += eight2;
+            break;
+          case 3:
+            encryptedString += eight3;
+            break;
+          case 4:
+            encryptedString += eight4;
+            break;
+        }
+        break;
+      case '9':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += nine1;
+            break;
+          case 2:
+            encryptedString += nine2;
+            break;
+          case 3:
+            encryptedString += nine3;
+            break;
+          case 4:
+            encryptedString += nine4;
             break;
         }
         break;
       case '*':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1010000101';
+            encryptedString += splat1;
             break;
           case 2:
-            encryptedString += '1001000101';
+            encryptedString += splat2;
             break;
           case 3:
-            encryptedString += '1010100001';
+            encryptedString += splat3;
             break;
           case 4:
-            encryptedString += '1010010001';
+            encryptedString += splat4;
             break;
         }
         break;
       case ':':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1011000101';
+            encryptedString += colon1;
             break;
           case 2:
-            encryptedString += '1001100101';
+            encryptedString += colon2;
             break;
           case 3:
-            encryptedString += '1010110001';
+            encryptedString += colon3;
             break;
           case 4:
-            encryptedString += '1010011001';
+            encryptedString += colon4;
             break;
         }
         break;
       case ',':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1011100101';
+            encryptedString += comma1;
             break;
           case 2:
-            encryptedString += '1001110101';
+            encryptedString += comma2;
             break;
           case 3:
-            encryptedString += '1010111001';
+            encryptedString += comma3;
             break;
           case 4:
-            encryptedString += '1010011101';
+            encryptedString += comma4;
             break;
         }
         break;
       case '&':
         switch (ranNum()) {
           case 1:
-            encryptedString += '1011110101';
+            encryptedString += ampersand1;
             break;
           case 2:
-            encryptedString += '1001111101';
+            encryptedString += ampersand2;
             break;
           case 3:
-            encryptedString += '1010111101';
+            encryptedString += ampersand3;
             break;
           case 4:
-            encryptedString += '1010011111';
+            encryptedString += ampersand4;
             break;
         }
         break;
@@ -741,136 +971,206 @@ const decrypt = () => {
     ) {
       decryptedString += 'k';
     } else if (
-      encryptionBlock[i] === '0011111010' ||
-      encryptionBlock[i] === '0101111010' ||
-      encryptionBlock[i] === '0100111110' ||
-      encryptionBlock[i] === '0101011110'
+      encryptionBlock[i] === l1 ||
+      encryptionBlock[i] === l2 ||
+      encryptionBlock[i] === l3 ||
+      encryptionBlock[i] === l4
     ) {
       decryptedString += 'l';
     } else if (
-      encryptionBlock[i] === '0001001010' ||
-      encryptionBlock[i] === '0100100010' ||
-      encryptionBlock[i] === '0100010010' ||
-      encryptionBlock[i] === '0101001000'
+      encryptionBlock[i] === m1 ||
+      encryptionBlock[i] === m2 ||
+      encryptionBlock[i] === m3 ||
+      encryptionBlock[i] === m4
     ) {
       decryptedString += 'm';
     } else if (
-      encryptionBlock[i] === '0001101010' ||
-      encryptionBlock[i] === '0100110010' ||
-      encryptionBlock[i] === '0100011010' ||
-      encryptionBlock[i] === '0101001100'
+      encryptionBlock[i] === n1 ||
+      encryptionBlock[i] === n2 ||
+      encryptionBlock[i] === n3 ||
+      encryptionBlock[i] === n4
     ) {
       decryptedString += 'n';
     } else if (
-      encryptionBlock[i] === '0001111010' ||
-      encryptionBlock[i] === '0100111010' ||
-      encryptionBlock[i] === '0100011110' ||
-      encryptionBlock[i] === '0101001110'
+      encryptionBlock[i] === o1 ||
+      encryptionBlock[i] === o2 ||
+      encryptionBlock[i] === o3 ||
+      encryptionBlock[i] === o4
     ) {
       decryptedString += 'o';
     } else if (
-      encryptionBlock[i] === '0000101010' ||
-      encryptionBlock[i] === '0100010010' ||
-      encryptionBlock[i] === '0100001010' ||
-      encryptionBlock[i] === '0101000100'
+      encryptionBlock[i] === p1 ||
+      encryptionBlock[i] === p2 ||
+      encryptionBlock[i] === p3 ||
+      encryptionBlock[i] === p4
     ) {
       decryptedString += 'p';
     } else if (
-      encryptionBlock[i] === '0000111010' ||
-      encryptionBlock[i] === '0100011010' ||
-      encryptionBlock[i] === '0100001110' ||
-      encryptionBlock[i] === '0101000110'
+      encryptionBlock[i] === q1 ||
+      encryptionBlock[i] === q2 ||
+      encryptionBlock[i] === q3 ||
+      encryptionBlock[i] === q4
     ) {
       decryptedString += 'q';
     } else if (
-      encryptionBlock[i] === '0000011010' ||
-      encryptionBlock[i] === '0100001010' ||
-      encryptionBlock[i] === '0100000110' ||
-      encryptionBlock[i] === '0101000010'
+      encryptionBlock[i] === r1 ||
+      encryptionBlock[i] === r2 ||
+      encryptionBlock[i] === r3 ||
+      encryptionBlock[i] === r4
     ) {
       decryptedString += 'r';
     } else if (
-      encryptionBlock[i] === '1100000101' ||
-      encryptionBlock[i] === '1010000101' ||
-      encryptionBlock[i] === '1011000001' ||
-      encryptionBlock[i] === '1010100001'
+      encryptionBlock[i] === s1 ||
+      encryptionBlock[i] === s2 ||
+      encryptionBlock[i] === s3 ||
+      encryptionBlock[i] === s4
     ) {
       decryptedString += 's';
     } else if (
-      encryptionBlock[i] === '1110000101' ||
-      encryptionBlock[i] === '1011000101' ||
-      encryptionBlock[i] === '1011100001' ||
-      encryptionBlock[i] === '1010110001'
+      encryptionBlock[i] === t1 ||
+      encryptionBlock[i] === t2 ||
+      encryptionBlock[i] === t3 ||
+      encryptionBlock[i] === t4
     ) {
       decryptedString += 't';
     } else if (
-      encryptionBlock[i] === '1111000101' ||
-      encryptionBlock[i] === '1011100101' ||
-      encryptionBlock[i] === '1011110001' ||
-      encryptionBlock[i] === '1010111001'
+      encryptionBlock[i] === u1 ||
+      encryptionBlock[i] === u2 ||
+      encryptionBlock[i] === u3 ||
+      encryptionBlock[i] === u4
     ) {
       decryptedString += 'u';
     } else if (
-      encryptionBlock[i] === '1111100101' ||
-      encryptionBlock[i] === '1011110101' ||
-      encryptionBlock[i] === '1011111001' ||
-      encryptionBlock[i] === '1010111101'
+      encryptionBlock[i] === v1 ||
+      encryptionBlock[i] === v2 ||
+      encryptionBlock[i] === v3 ||
+      encryptionBlock[i] === v4
     ) {
       decryptedString += 'v';
     } else if (
-      encryptionBlock[i] === '' ||
-      encryptionBlock[i] === '' ||
-      encryptionBlock[i] === '' ||
-      encryptionBlock[i] === ''
+      encryptionBlock[i] === w1 ||
+      encryptionBlock[i] === w2 ||
+      encryptionBlock[i] === w3 ||
+      encryptionBlock[i] === w4
     ) {
       decryptedString += 'w';
     } else if (
-      encryptionBlock[i] === '1111110101' ||
-      encryptionBlock[i] === '1011111101' ||
-      encryptionBlock[i] === '1011111101' ||
-      encryptionBlock[i] === '1010111111'
+      encryptionBlock[i] === x1 ||
+      encryptionBlock[i] === x2 ||
+      encryptionBlock[i] === x3 ||
+      encryptionBlock[i] === x4
     ) {
       decryptedString += 'x';
     } else if (
-      encryptionBlock[i] === '1101110101' ||
-      encryptionBlock[i] === '1010111101' ||
-      encryptionBlock[i] === '1011011101' ||
-      encryptionBlock[i] === '1010101111'
+      encryptionBlock[i] === y1 ||
+      encryptionBlock[i] === y2 ||
+      encryptionBlock[i] === y3 ||
+      encryptionBlock[i] === y4
     ) {
       decryptedString += 'y';
     } else if (
-      encryptionBlock[i] === '1110110101' ||
-      encryptionBlock[i] === '1011011101' ||
-      encryptionBlock[i] === '1011101101' ||
-      encryptionBlock[i] === '1010110111'
+      encryptionBlock[i] === z1 ||
+      encryptionBlock[i] === z2 ||
+      encryptionBlock[i] === z3 ||
+      encryptionBlock[i] === z4
     ) {
       decryptedString += 'z';
     } else if (
-      encryptionBlock[i] === '1010000101' ||
-      encryptionBlock[i] === '1001000101' ||
-      encryptionBlock[i] === '1010100001' ||
-      encryptionBlock[i] === '1010010001'
+      encryptionBlock[i] === zero1 ||
+      encryptionBlock[i] === zero2 ||
+      encryptionBlock[i] === zero3 ||
+      encryptionBlock[i] === zero4
+    ) {
+      decryptedString += '0';
+    } else if (
+      encryptionBlock[i] === one1 ||
+      encryptionBlock[i] === one2 ||
+      encryptionBlock[i] === one3 ||
+      encryptionBlock[i] === one4
+    ) {
+      decryptedString += '1';
+    } else if (
+      encryptionBlock[i] === two1 ||
+      encryptionBlock[i] === two2 ||
+      encryptionBlock[i] === two3 ||
+      encryptionBlock[i] === two4
+    ) {
+      decryptedString += '2';
+    } else if (
+      encryptionBlock[i] === three1 ||
+      encryptionBlock[i] === three2 ||
+      encryptionBlock[i] === three3 ||
+      encryptionBlock[i] === three4
+    ) {
+      decryptedString += '3';
+    } else if (
+      encryptionBlock[i] === four1 ||
+      encryptionBlock[i] === four2 ||
+      encryptionBlock[i] === four3 ||
+      encryptionBlock[i] === four4
+    ) {
+      decryptedString += '4';
+    } else if (
+      encryptionBlock[i] === five1 ||
+      encryptionBlock[i] === five2 ||
+      encryptionBlock[i] === five3 ||
+      encryptionBlock[i] === five4
+    ) {
+      decryptedString += '5';
+    } else if (
+      encryptionBlock[i] === six1 ||
+      encryptionBlock[i] === six2 ||
+      encryptionBlock[i] === six3 ||
+      encryptionBlock[i] === six3
+    ) {
+      decryptedString += '6';
+    } else if (
+      encryptionBlock[i] === seven1 ||
+      encryptionBlock[i] === seven2 ||
+      encryptionBlock[i] === seven3 ||
+      encryptionBlock[i] === seven4
+    ) {
+      decryptedString += '7';
+    } else if (
+      encryptionBlock[i] === eight1 ||
+      encryptionBlock[i] === eight2 ||
+      encryptionBlock[i] === eight3 ||
+      encryptionBlock[i] === eight4
+    ) {
+      decryptedString += '8';
+    } else if (
+      encryptionBlock[i] === nine1 ||
+      encryptionBlock[i] === nine2 ||
+      encryptionBlock[i] === nine3 ||
+      encryptionBlock[i] === nine4
+    ) {
+      decryptedString += '9';
+    } else if (
+      encryptionBlock[i] === splat1 ||
+      encryptionBlock[i] === splat2 ||
+      encryptionBlock[i] === splat3 ||
+      encryptionBlock[i] === splat4
     ) {
       decryptedString += '*';
     } else if (
-      encryptionBlock[i] === '1011000101' ||
-      encryptionBlock[i] === '1001100101' ||
-      encryptionBlock[i] === '1010110001' ||
-      encryptionBlock[i] === '1010011001'
+      encryptionBlock[i] === colon1 ||
+      encryptionBlock[i] === colon2 ||
+      encryptionBlock[i] === colon3 ||
+      encryptionBlock[i] === colon4
     ) {
       decryptedString += ':';
     } else if (
-      encryptionBlock[i] === '1011100101' ||
-      encryptionBlock[i] === '1001110101' ||
-      encryptionBlock[i] === '1010111001' ||
-      encryptionBlock[i] === '1010011101'
+      encryptionBlock[i] === comma1 ||
+      encryptionBlock[i] === comma2 ||
+      encryptionBlock[i] === comma3 ||
+      encryptionBlock[i] === comma4
     ) {
       decryptedString += ',';
     } else if (
-      encryptionBlock[i] === '1011110101' ||
-      encryptionBlock[i] === '1001111101' ||
-      encryptionBlock[i] === '1010111101' ||
-      encryptionBlock[i] === '1010011111'
+      encryptionBlock[i] === ampersand1 ||
+      encryptionBlock[i] === ampersand2 ||
+      encryptionBlock[i] === ampersand3 ||
+      encryptionBlock[i] === ampersand4
     ) {
       decryptedString += '&';
     }
