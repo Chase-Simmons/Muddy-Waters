@@ -205,10 +205,7 @@ const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
   return number;
 };
-const encrypt = () => {
-  const string =
-    '*login*name:hiraeth,password:password,&*stats*str:15,dex:3,vit:4,def:4,agi:3,arc:4,pie:1,&';
-
+const encrypt = (string) => {
   for (let i = 0; i < string.length; i++) {
     switch (string[i]) {
       case 'a':
@@ -872,17 +869,16 @@ const encrypt = () => {
   }
 
   console.log(encryptedString);
-  decrypt();
 };
 
-const decrypt = () => {
+const decrypt = (encryptedData) => {
   const encryptionBlock = [];
   let encryptionBlockItemHolder = '';
   let encryptionBlockVerification = 0;
 
-  for (let i = 0; i < encryptedString.length; i++) {
+  for (let i = 0; i < encryptedData.length; i++) {
     encryptionBlockVerification++;
-    encryptionBlockItemHolder += encryptedString[i];
+    encryptionBlockItemHolder += encryptedData[i];
     if (encryptionBlockVerification === 10) {
       encryptionBlock.push(encryptionBlockItemHolder);
       encryptionBlockItemHolder = '';
@@ -891,8 +887,6 @@ const decrypt = () => {
   }
 
   for (let i = 0; i < encryptionBlock.length; i++) {
-    console.log(encryptionBlock[i]);
-
     if (
       encryptionBlock[i] === a1 ||
       encryptionBlock[i] === a2 ||
@@ -1178,6 +1172,12 @@ const decrypt = () => {
   console.log(decryptedString);
 };
 
-module.exports = () => {
-  encrypt();
+module.exports = (call) => {
+  if (call.mode === 'encrypt') {
+    encrypt(call.data);
+    return encryptedString;
+  } else if (call.mode === 'decrypt') {
+    decrypt(call.data);
+    return decryptedString;
+  }
 };

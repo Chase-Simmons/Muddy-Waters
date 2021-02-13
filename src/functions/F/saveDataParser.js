@@ -1,4 +1,5 @@
 const write = require('write');
+const recrypt = require('./re:crypt');
 
 module.exports = (e) => {
   if (typeof e === 'string') {
@@ -77,6 +78,12 @@ module.exports = (e) => {
       unparsedSaveData += '&';
     }
 
-    write('src/save/data.txt', unparsedSaveData);
+    write(
+      'src/save/data.txt',
+      recrypt({
+        mode: 'encrypt',
+        data: unparsedSaveData,
+      })
+    );
   }
 };

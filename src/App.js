@@ -4,13 +4,16 @@ const fs = require('fs');
 const checkSave = () => {
   try {
     fs.readFile('src/save/data.txt', 'utf8', function (err, data) {
-      let parsedData = F.saveDataParser(data);
+      let parsedData = F.saveDataParser(
+        F.recrypt({
+          mode: 'decrypt',
+          data,
+        })
+      );
       F.save({ data: parsedData, type: 'save' });
     });
   } catch (error) {}
 };
-
-F.recrypt();
 
 checkSave();
 

@@ -6,5 +6,6 @@ module.exports = (e) => {
   } else if (e.type === 'delete') {
     save = {};
   }
+  console.log(save);
   return save;
 };
