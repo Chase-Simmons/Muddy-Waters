@@ -29,3 +29,15 @@ console.log(
 console.log('');
 
 readCMD();
+
+process.on('exit', () => {
+  F.saveDataParser(
+    F.save({
+      data: {
+        ostatus: { status: 'offline' },
+      },
+      type: 'save',
+    })
+  );
+  console.log('logged out');
+});

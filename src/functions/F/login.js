@@ -16,6 +16,14 @@ module.exports = (e) => {
           setTimeout(() => {
             console.log('successfully logged in.');
           }, 500);
+          e.F.saveDataParser(
+            e.F.save({
+              data: {
+                ostatus: { status: 'online' },
+              },
+              type: 'save',
+            })
+          );
           setTimeout(() => {
             console.log(`hello ${saveData.login.name}!`);
           }, 1000);

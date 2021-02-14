@@ -394,6 +394,7 @@ const regisFinalization = (e) => {
       e.F.save({
         data: {
           login: { name, password },
+          ostatus: { status: 'offline' },
           stats: {
             str: selectedClassStats.str + statBonuses.str,
             dex: selectedClassStats.dex + statBonuses.dex,
