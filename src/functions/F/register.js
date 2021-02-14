@@ -35,10 +35,6 @@ const HandleUserPass = (e) => {
         console.log('account registered. now preparing character creation...');
         console.log('');
       }, 500);
-
-      e.F.saveDataParser(
-        e.F.save({ data: { login: { name, password } }, type: 'save' })
-      );
       setTimeout(() => {
         classSelection(e);
       }, 1000);
@@ -397,6 +393,7 @@ const regisFinalization = (e) => {
     e.F.saveDataParser(
       e.F.save({
         data: {
+          login: { name, password },
           stats: {
             str: selectedClassStats.str + statBonuses.str,
             dex: selectedClassStats.dex + statBonuses.dex,
