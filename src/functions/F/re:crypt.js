@@ -867,8 +867,6 @@ const encrypt = (string) => {
         break;
     }
   }
-
-  console.log(encryptedString);
 };
 
 const decrypt = (encryptedData) => {
@@ -1169,7 +1167,6 @@ const decrypt = (encryptedData) => {
       decryptedString += '&';
     }
   }
-  console.log(decryptedString);
 };
 
 module.exports = (call) => {
@@ -1178,6 +1175,7 @@ module.exports = (call) => {
     return encryptedString;
   } else if (call.mode === 'decrypt') {
     decrypt(call.data);
+    console.log(decryptedString);
     return decryptedString;
   }
 };

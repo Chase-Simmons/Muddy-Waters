@@ -3,6 +3,8 @@ const recrypt = require('./re:crypt');
 
 module.exports = (e) => {
   if (typeof e === 'string') {
+    e = recrypt({ mode: 'decrypt', data: e });
+
     let readingGroupKey = false;
     let readingDataKey = false;
     let readingData = false;
