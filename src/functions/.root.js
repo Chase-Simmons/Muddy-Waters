@@ -11,7 +11,6 @@ const saveDataParser = require('./F/saveDataParser');
 const save = require('./F/save');
 const rollBonusStats = require('./F/rollBonusStats');
 const deleteSave = require('./F/deleteSave');
-const recrypt = require('./F/re:crypt');
 
 module.exports = {
   readline,
@@ -23,5 +22,4 @@ module.exports = {
   save,
   rollBonusStats,
   deleteSave,
-  recrypt,
 };
