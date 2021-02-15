@@ -81,7 +81,7 @@ module.exports = (e) => {
     }
 
     write(
-      'src/save/data.txt',
+      'src/save/data.dat',
       recrypt({
         mode: 'encrypt',
         data: unparsedSaveData,

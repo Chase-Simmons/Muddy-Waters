@@ -1,9 +1,14 @@
 const F = require('./functions/.root.js');
+const C = require('./core/.root.js');
+const recrypt = require('./functions/F/re:crypt');
 const fs = require('fs');
+
+console.log(C.parse(C.cities));
+recrypt({ mode: 'encrypt', data: C.parse(C.cities) });
 
 const checkSave = () => {
   try {
-    fs.readFile('src/save/data.txt', 'utf8', function (err, data) {
+    fs.readFile('src/save/data.dat', 'utf8', function (err, data) {
       let parsedData = F.saveDataParser(data);
       F.save({ data: parsedData, type: 'save' });
     });

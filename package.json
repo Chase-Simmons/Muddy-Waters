@@ -1,13 +1,13 @@
 {
   "name": "muddy-waters",
   "version": "1.0.0",
-  "description": "",
+  "description": "MUD styled game concept",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "node src/app.js"
   },
-  "author": "",
+  "author": "Chase [Gideon] Simmons",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

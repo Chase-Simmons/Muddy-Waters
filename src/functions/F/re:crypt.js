@@ -201,6 +201,16 @@ const ampersand2 = '1011110101';
 const ampersand3 = '1011110101';
 const ampersand4 = '1011110101';
 
+const leftbracket1 = '1111001111';
+const leftbracket2 = '1111001111';
+const leftbracket3 = '1111001111';
+const leftbracket4 = '1111001111';
+
+const rightbracket1 = '0000110000';
+const rightbracket2 = '0000110000';
+const rightbracket3 = '0000110000';
+const rightbracket4 = '0000110000';
+
 const ranNum = () => {
   const number = Math.floor(Math.random() * 4) + 1;
   return number;
@@ -849,6 +859,38 @@ const encrypt = (string) => {
             break;
         }
         break;
+      case '[':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += leftbracket1;
+            break;
+          case 2:
+            encryptedString += leftbracket2;
+            break;
+          case 3:
+            encryptedString += leftbracket3;
+            break;
+          case 4:
+            encryptedString += leftbracket4;
+            break;
+        }
+        break;
+      case ']':
+        switch (ranNum()) {
+          case 1:
+            encryptedString += rightbracket1;
+            break;
+          case 2:
+            encryptedString += rightbracket2;
+            break;
+          case 3:
+            encryptedString += rightbracket3;
+            break;
+          case 4:
+            encryptedString += rightbracket4;
+            break;
+        }
+        break;
       case '`':
         switch (ranNum()) {
           case 1:
@@ -1165,13 +1207,29 @@ const decrypt = (encryptedData) => {
       encryptionBlock[i] === ampersand4
     ) {
       decryptedString += '&';
+    } else if (
+      encryptionBlock[i] === leftbracket1 ||
+      encryptionBlock[i] === leftbracket2 ||
+      encryptionBlock[i] === leftbracket3 ||
+      encryptionBlock[i] === leftbracket4
+    ) {
+      decryptedString += '[';
+    } else if (
+      encryptionBlock[i] === rightbracket1 ||
+      encryptionBlock[i] === rightbracket2 ||
+      encryptionBlock[i] === rightbracket3 ||
+      encryptionBlock[i] === rightbracket4
+    ) {
+      decryptedString += ']';
     }
   }
 };
 
 module.exports = (call) => {
   if (call.mode === 'encrypt') {
+    console.log(call.data);
     encrypt(call.data);
+    console.log(encryptedString);
     return encryptedString;
   } else if (call.mode === 'decrypt') {
     decrypt(call.data);
