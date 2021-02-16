@@ -395,15 +395,21 @@ const regisFinalization = (e) => {
         data: {
           login: { name, password },
           ostatus: { status: 'offline' },
-          stats: {
-            str: selectedClassStats.str + statBonuses.str,
-            dex: selectedClassStats.dex + statBonuses.dex,
-            vit: selectedClassStats.vit + statBonuses.vit,
-            def: selectedClassStats.def + statBonuses.def,
-            agi: selectedClassStats.agi + statBonuses.agi,
-            arc: selectedClassStats.arc + statBonuses.arc,
-            pie: selectedClassStats.pie + statBonuses.pie,
+          progression: {
+            quest: 'q1',
+            location: 'c1t',
           },
+          stats: {
+            str: String(selectedClassStats.str + statBonuses.str),
+            dex: String(selectedClassStats.dex + statBonuses.dex),
+            vit: String(selectedClassStats.vit + statBonuses.vit),
+            def: String(selectedClassStats.def + statBonuses.def),
+            agi: String(selectedClassStats.agi + statBonuses.agi),
+            arc: String(selectedClassStats.arc + statBonuses.arc),
+            pie: String(selectedClassStats.pie + statBonuses.pie),
+          },
+          money: { copper: '0', silver: '0', gold: '0' },
+          inventory: { test: 'data' },
         },
         type: 'save',
       })
