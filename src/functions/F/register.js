@@ -399,6 +399,17 @@ const regisFinalization = (e) => {
             quest: 'q1',
             location: 'c1t',
           },
+          info: { maxhp: 'temp', currenthp: 'temp' },
+          equipment: {
+            head: 'temp',
+            body: 'temp',
+            legs: 'temp',
+            hands: 'temp',
+            boots: 'temp',
+            ring1: 'temp',
+            ring2: 'temp',
+            necklace: 'temp',
+          },
           stats: {
             str: String(selectedClassStats.str + statBonuses.str),
             dex: String(selectedClassStats.dex + statBonuses.dex),
