@@ -2,13 +2,13 @@ module.exports = [
   {
     data: {
       name: 'traverse town',
-      loc: 'c1t',
+      loc: 'c1',
     },
   },
   {
     data: {
       name: 'rift peak',
-      loc: 'c2t',
+      loc: 'c2',
     },
   },
 ];

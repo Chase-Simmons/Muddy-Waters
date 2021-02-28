@@ -25,7 +25,9 @@ module.exports = (e) => {
             })
           );
           setTimeout(() => {
-            console.log(`hello ${saveData.login.name}!`);
+            console.log(
+              `hello ${saveData.login.name}!, current location ${saveData.progression.location}`
+            );
           }, 1000);
         } else {
           console.log('invalid password please attempt to `/login` again...');
