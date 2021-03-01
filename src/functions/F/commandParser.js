@@ -1,4 +1,5 @@
 module.exports = (e) => {
+  const getSave = e.F.save({ type: 'get' });
   let defaultConsole = false;
   switch (e.res) {
     case '/login':
@@ -18,11 +19,15 @@ module.exports = (e) => {
       break;
 
     case '/save':
-      console.log(e.F.save({ type: 'get' }));
+      console.log(getSave);
       defaultConsole = true;
       break;
     case '/delete':
       e.F.deleteSave(e);
+      break;
+
+    case '/move':
+      e.F.moveOnMap(getSave.progression.location);
       break;
 
     default:

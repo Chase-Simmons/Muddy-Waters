@@ -11,6 +11,8 @@ const saveDataParser = require('./F/saveDataParser');
 const save = require('./F/save');
 const rollBonusStats = require('./F/rollBonusStats');
 const deleteSave = require('./F/deleteSave');
+const getCityName = require('./F/getCityName');
+const moveOnMap = require('./F/moveOnMap');
 
 module.exports = {
   readline,
@@ -22,4 +24,6 @@ module.exports = {
   save,
   rollBonusStats,
   deleteSave,
+  getCityName,
+  moveOnMap,
 };

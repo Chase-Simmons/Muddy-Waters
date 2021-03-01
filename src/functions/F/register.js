@@ -397,7 +397,7 @@ const regisFinalization = (e) => {
           ostatus: { status: 'offline' },
           progression: {
             quest: 'q1',
-            location: 'c1t',
+            location: 'c1',
           },
           info: { maxhp: 'temp', currenthp: 'temp' },
           equipment: {
