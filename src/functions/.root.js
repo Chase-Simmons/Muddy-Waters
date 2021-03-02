@@ -12,6 +12,7 @@ const save = require('./F/save');
 const rollBonusStats = require('./F/rollBonusStats');
 const deleteSave = require('./F/deleteSave');
 const getCityName = require('./F/getCityName');
+const getRouteName = require('./F/getRouteName');
 const moveOnMap = require('./F/moveOnMap');
 
 module.exports = {
@@ -25,5 +26,6 @@ module.exports = {
   rollBonusStats,
   deleteSave,
   getCityName,
+  getRouteName,
   moveOnMap,
 };

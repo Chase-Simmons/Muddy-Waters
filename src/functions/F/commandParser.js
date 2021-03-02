@@ -27,7 +27,7 @@ module.exports = (e) => {
       break;
 
     case '/move':
-      e.F.moveOnMap(getSave.progression.location);
+      e.F.moveOnMap({ F: e.F, userLoc: getSave.progression.location });
       break;
 
     default:

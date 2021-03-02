@@ -8,13 +8,12 @@ module.exports = (userLoc) => {
   for (city of cities) {
     if (userLoc === city.data.loc) {
       location = city.data.name;
-      match = true;
+      return location;
     }
   }
 
   if (match === false) {
     location = 'unknown area';
+    return location;
   }
-
-  return location;
 };
