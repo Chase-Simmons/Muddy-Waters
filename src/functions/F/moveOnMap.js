@@ -21,11 +21,11 @@ module.exports = (e) => {
         }
       }
     }
-    // if (match === true) {
-    //   e.F.commandParser({ res: '', F: e.F });
-    // } else {
-    //   e.F.commandParser({ res: '', F: e.F });
-    // }
+    if (match === true) {
+      e.F.commandParser({ res: '', F: e.F });
+    } else {
+      e.F.commandParser({ res: '', F: e.F });
+    }
   }
 
   return location;
