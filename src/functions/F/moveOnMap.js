@@ -20,6 +20,11 @@ module.exports = (e) => {
             .log
             // `--> ${e.F.getCityName(connection)} : use command '/${connection}'`
             ();
+        } else if (connection[0] === 'b') {
+          console
+            .log
+            // `--> ${e.F.getCityName(connection)} : use command '/${connection}'`
+            ();
         } else {
           match = false;
           console.log(`--> No available locations to travel at this time.`);
