@@ -1,5 +1,6 @@
 const connections = require('../../core/C/connections');
 const fs = require('fs');
+const { connect } = require('http2');
 
 module.exports = (e) => {
   let match = true;
@@ -32,7 +33,20 @@ module.exports = (e) => {
       }
     }
     if (match === true) {
-      e.F.commandParser({ res: '', F: e.F });
+      e.F.readline.question('', (res) => {
+        for (location of connections) {
+          if (e.userLoc === location.data.loc) {
+            for (connection of location.data.connections) {
+              console.log(connection);
+              if (res === `/${connection}`) {
+                console.log(`worked ${res}`);
+              } else {
+                console.log('failed');
+              }
+            }
+          }
+        }
+      });
     } else {
       e.F.commandParser({ res: '', F: e.F });
     }
