@@ -39,9 +39,25 @@ module.exports = (e) => {
             for (connection of location.data.connections) {
               console.log(connection);
               if (res === `/${connection}`) {
-                console.log(`worked ${res}`);
+                console.log(connection);
+                e.F.saveDataParser(
+                  e.F.save({
+                    data: {
+                      progression: {
+                        ...e.F.save({ type: 'get' }).progression,
+                        location: `${connection}`,
+                      },
+                    },
+                    type: 'save',
+                  })
+                );
+                e.F.commandParser({ res: '', F: e.F });
+                return;
               } else {
-                console.log('failed');
+                console.log(
+                  'error when trying to change locations, please try again'
+                );
+                e.F.commandParser({ res: '', F: e.F });
               }
             }
           }
