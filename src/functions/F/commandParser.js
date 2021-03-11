@@ -30,6 +30,10 @@ module.exports = (e) => {
       e.F.moveOnMap({ F: e.F, userLoc: getSave.progression.location });
       break;
 
+    case '/init':
+      e.F.initStats(e);
+      defaultConsole = true;
+
     default:
       defaultConsole = true;
       break;

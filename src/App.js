@@ -4,7 +4,7 @@ const recrypt = require('./functions/F/re:crypt');
 const fs = require('fs');
 
 // console.log(C.parse(C.cities));
-recrypt({ mode: 'encrypt', data: C.parse(C.cities) });
+// recrypt({ mode: 'encrypt', data: C.parse(C.cities) });
 
 const checkSave = () => {
   try {

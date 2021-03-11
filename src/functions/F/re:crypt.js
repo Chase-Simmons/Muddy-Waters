@@ -1229,7 +1229,7 @@ module.exports = (call) => {
   if (call.mode === 'encrypt') {
     console.log(call.data);
     encrypt(call.data);
-    console.log(encryptedString);
+    // console.log(encryptedString);
     return encryptedString;
   } else if (call.mode === 'decrypt') {
     decrypt(call.data);

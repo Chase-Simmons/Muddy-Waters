@@ -14,6 +14,7 @@ const deleteSave = require('./F/deleteSave');
 const getCityName = require('./F/getCityName');
 const getRouteName = require('./F/getRouteName');
 const moveOnMap = require('./F/moveOnMap');
+const initStats = require('./F/initStats');
 
 module.exports = {
   readline,
@@ -28,4 +29,5 @@ module.exports = {
   getCityName,
   getRouteName,
   moveOnMap,
+  initStats,
 };

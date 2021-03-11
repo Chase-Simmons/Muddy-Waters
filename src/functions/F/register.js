@@ -394,25 +394,6 @@ const regisFinalization = (e) => {
       e.F.save({
         data: {
           login: { name, password },
-          ostatus: { status: 'offline' },
-          progression: {
-            quest: 'q1',
-            location: 'c1',
-          },
-          info: { maxhp: 'temp', currenthp: 'temp' },
-          equipment: {
-            head: 'temp',
-            body: 'temp',
-            legs: 'temp',
-            weapon: 'temp',
-            shield: 'temp',
-            hands: 'temp',
-            boots: 'temp',
-            ring1: 'temp',
-            ring2: 'temp',
-            necklace: 'temp',
-            earrings: 'temp',
-          },
           stats: {
             str: String(selectedClassStats.str + statBonuses.str),
             dex: String(selectedClassStats.dex + statBonuses.dex),
@@ -422,8 +403,6 @@ const regisFinalization = (e) => {
             arc: String(selectedClassStats.arc + statBonuses.arc),
             pie: String(selectedClassStats.pie + statBonuses.pie),
           },
-          money: { copper: '0', silver: '0', gold: '0' },
-          inventory: { test: 'data' },
         },
         type: 'save',
       })

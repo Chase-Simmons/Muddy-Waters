@@ -35,9 +35,7 @@ module.exports = (e) => {
         for (location of connections) {
           if (e.userLoc === location.data.loc) {
             for (connection of location.data.connections) {
-              console.log(connection);
               if (res === `/${connection}`) {
-                console.log(connection);
                 e.F.saveDataParser(
                   e.F.save({
                     data: {
@@ -52,9 +50,9 @@ module.exports = (e) => {
                 e.F.commandParser({ res: '', F: e.F });
                 return;
               } else {
-                console.log(
-                  'error when trying to change locations, please try again'
-                );
+                // console.log(
+                //   'error when trying to change locations, please try again'
+                // );
                 e.F.commandParser({ res: '', F: e.F });
               }
             }
