@@ -29,4 +29,10 @@ module.exports = [
       loc: 'r5',
     },
   },
+  {
+    data: {
+      name: 'route 6',
+      loc: 'r6',
+    },
+  },
 ];
