@@ -11,7 +11,7 @@ module.exports = [
     data: {
       loc: 'c2',
       length: '1',
-      connections: ['r2'],
+      connections: ['r2', 'r3'],
       tileToConnection: ['1'],
     },
   },
@@ -29,6 +29,14 @@ module.exports = [
       length: '12',
       connections: ['c1', 'c2'],
       tileToConnection: ['1', '12'],
+    },
+  },
+  {
+    data: {
+      loc: 'r3',
+      length: '12',
+      connections: ['c2'],
+      tileToConnection: ['1'],
     },
   },
 ];
