@@ -15,6 +15,7 @@ const getCityName = require('./F/getCityName');
 const getRouteName = require('./F/getRouteName');
 const moveOnMap = require('./F/moveOnMap');
 const initStats = require('./F/initStats');
+const autoPathRoute = require('./F/autoPathRoute');
 
 module.exports = {
   readline,
@@ -30,4 +31,5 @@ module.exports = {
   getRouteName,
   moveOnMap,
   initStats,
+  autoPathRoute,
 };

@@ -36,6 +36,7 @@ module.exports = (e) => {
           if (e.userLoc === location.data.loc) {
             for (connection of location.data.connections) {
               if (res === `/${connection}`) {
+                e.F.autoPathRoute({ F: e.F, status: 'start' });
                 e.F.saveDataParser(
                   e.F.save({
                     data: {
