@@ -1,6 +1,7 @@
 const connections = require('../../core/C/connections');
 const fs = require('fs');
 const { connect } = require('http2');
+const autoPathRoute = require('./autoPathRoute');
 
 module.exports = (e) => {
   let match = true;
@@ -12,6 +13,13 @@ module.exports = (e) => {
           console.log(
             `--> ${e.F.getRouteName(connection)} : use command '/${connection}'`
           );
+          e.F.autoPathRoute({
+            F: e.F,
+            path: connection,
+            length: location.data.length,
+            connections: location.data.connections,
+            tileToConnection: location.data.tileToConnection,
+          });
         } else if (connection[0] === 'c') {
           console.log(
             `--> ${e.F.getCityName(connection)} : use command '/${connection}'`

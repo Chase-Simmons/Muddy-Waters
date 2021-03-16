@@ -15,6 +15,7 @@ const beginRoute = (e) => {
 };
 
 module.exports = (e) => {
+  console.log(e);
   if (e.status === 'start') {
     beginRoute(e.F);
   }
