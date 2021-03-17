@@ -15,8 +15,11 @@ const beginRoute = (e) => {
 };
 
 module.exports = (e) => {
-  console.log(e);
+  totalTiles = e.length;
+  pathToTile = e.path;
+  console.log(totalTiles, pathToTile);
   if (e.status === 'start') {
+    currentStatus = 'start';
     beginRoute(e.F);
   }
 };

@@ -13,13 +13,6 @@ module.exports = (e) => {
           console.log(
             `--> ${e.F.getRouteName(connection)} : use command '/${connection}'`
           );
-          e.F.autoPathRoute({
-            F: e.F,
-            path: connection,
-            length: location.data.length,
-            connections: location.data.connections,
-            tileToConnection: location.data.tileToConnection,
-          });
         } else if (connection[0] === 'c') {
           console.log(
             `--> ${e.F.getCityName(connection)} : use command '/${connection}'`
@@ -41,29 +34,29 @@ module.exports = (e) => {
     if (match === true) {
       e.F.readline.question('', (res) => {
         for (location of connections) {
-          if (e.userLoc === location.data.loc) {
+          if (res === `/${location.data.loc}`) {
             for (connection of location.data.connections) {
-              if (res === `/${connection}`) {
-                e.F.autoPathRoute({ F: e.F, status: 'start' });
-                e.F.saveDataParser(
-                  e.F.save({
-                    data: {
-                      progression: {
-                        ...e.F.save({ type: 'get' }).progression,
-                        location: `${connection}`,
-                      },
+              e.F.autoPathRoute({
+                F: e.F,
+                path: location.data.loc,
+                length: location.data.length,
+                connections: location.data.connections,
+                tileToConnection: location.data.tileToConnection,
+                status: 'start',
+              });
+              e.F.saveDataParser(
+                e.F.save({
+                  data: {
+                    progression: {
+                      ...e.F.save({ type: 'get' }).progression,
+                      location: `${connection}`,
                     },
-                    type: 'save',
-                  })
-                );
-                e.F.commandParser({ res: '', F: e.F });
-                return;
-              } else {
-                // console.log(
-                //   'error when trying to change locations, please try again'
-                // );
-                e.F.commandParser({ res: '', F: e.F });
-              }
+                  },
+                  type: 'save',
+                })
+              );
+              e.F.commandParser({ res: '', F: e.F });
+              return;
             }
           }
         }
