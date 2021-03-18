@@ -6,7 +6,17 @@ let currentStatus;
 const beginRoute = (e) => {
   currentTile++;
   console.log('i am working');
-
+  e.F.saveDataParser(
+    e.F.save({
+      data: {
+        progression: {
+          ...e.F.save({ type: 'get' }).progression,
+          tile: currentTile,
+        },
+      },
+      type: 'save',
+    })
+  );
   setTimeout(() => {
     if (currentTile !== pathToTile) {
       beginRoute(e);
@@ -15,11 +25,12 @@ const beginRoute = (e) => {
 };
 
 module.exports = (e) => {
+  console.log(e);
   totalTiles = e.length;
   pathToTile = e.path;
   console.log(totalTiles, pathToTile);
   if (e.status === 'start') {
     currentStatus = 'start';
-    beginRoute(e.F);
+    beginRoute(e);
   }
 };

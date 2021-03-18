@@ -5,6 +5,7 @@ module.exports = [
       length: '1',
       connections: ['r1', 'r2'],
       tileToConnection: ['1', '1'],
+      dangerRating: 0,
     },
   },
   {
@@ -13,6 +14,7 @@ module.exports = [
       length: '1',
       connections: ['r2', 'r3'],
       tileToConnection: ['1'],
+      dangerRating: 0,
     },
   },
   {
@@ -21,6 +23,7 @@ module.exports = [
       length: '12',
       connections: ['c1'],
       tileToConnection: ['1'],
+      dangerRating: 1,
     },
   },
   {
@@ -29,6 +32,7 @@ module.exports = [
       length: '12',
       connections: ['c1', 'c2'],
       tileToConnection: ['1', '12'],
+      dangerRating: 1,
     },
   },
   {
@@ -37,6 +41,7 @@ module.exports = [
       length: '12',
       connections: ['c2'],
       tileToConnection: ['1'],
+      dangerRating: 1,
     },
   },
 ];

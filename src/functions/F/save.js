@@ -8,6 +8,6 @@ module.exports = (e) => {
     write('src/save/data.txt', '');
     save = {};
   }
-  // console.log(save);
+  // console.log(save.progression);
   return save;
 };
