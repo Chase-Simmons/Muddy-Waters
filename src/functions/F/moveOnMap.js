@@ -3,6 +3,8 @@ const fs = require('fs');
 const { connect } = require('http2');
 const autoPathRoute = require('./autoPathRoute');
 
+let userTiles;
+
 module.exports = (e) => {
   let match = true;
   for (location of connections) {
@@ -13,6 +15,7 @@ module.exports = (e) => {
           console.log(
             `--> ${e.F.getRouteName(connection)} : use command '/${connection}'`
           );
+          userTiles = location.data.length;
         } else if (connection[0] === 'c') {
           console.log(
             `--> ${e.F.getCityName(connection)} : use command '/${connection}'`
@@ -39,7 +42,7 @@ module.exports = (e) => {
               e.F.autoPathRoute({
                 F: e.F,
                 path: location.data.loc,
-                length: location.data.length,
+                length: userTiles,
                 connections: location.data.connections,
                 tileToConnection: location.data.tileToConnection,
                 status: 'start',
