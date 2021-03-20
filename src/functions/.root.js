@@ -16,6 +16,7 @@ const getRouteName = require('./F/getRouteName');
 const moveOnMap = require('./F/moveOnMap');
 const initStats = require('./F/initStats');
 const autoPathRoute = require('./F/autoPathRoute');
+const randomEncounter = require('./F/randomEncounter');
 
 module.exports = {
   readline,
@@ -32,4 +33,5 @@ module.exports = {
   moveOnMap,
   initStats,
   autoPathRoute,
+  randomEncounter,
 };

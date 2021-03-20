@@ -5,7 +5,7 @@ let currentStatus;
 
 const beginRoute = (e) => {
   currentTile++;
-  console.log('i am working');
+  console.log(currentTile, pathToTile);
   e.F.saveDataParser(
     e.F.save({
       data: {
@@ -17,9 +17,12 @@ const beginRoute = (e) => {
       type: 'save',
     })
   );
+  e.F.randomEncounter(totalTiles);
   setTimeout(() => {
     if (currentTile !== pathToTile) {
       beginRoute(e);
+    } else if (currentTile === pathToTile) {
+      //send save update
     }
   }, 1000);
 };
@@ -27,7 +30,7 @@ const beginRoute = (e) => {
 module.exports = (e) => {
   console.log(e);
   totalTiles = e.length;
-  pathToTile = e.path;
+  pathToTile = 5;
   console.log(totalTiles, pathToTile);
   if (e.status === 'start') {
     currentStatus = 'start';
